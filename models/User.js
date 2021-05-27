@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
+const FBW = require('./FBW');
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -14,7 +16,18 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
 
-    joined: String
+    height: Number,
+    weight: Number,
+    schedule: Number,
+    BMI: Number,
+    lastDifficulty: String,
+
+    excersizes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'FBW'
+        }
+    ]
 });
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 

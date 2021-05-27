@@ -12,7 +12,11 @@ const flash = require('connect-flash');
 
 // Routes
 const authRoutes = require('./routes/auth');
-const isLoggedIn = require('./middleware');
+const userDefineRoutes = require('./routes/userDefine');
+const workoutRoutes = require('./routes/workout');
+
+// handlers
+const isLoggedIn = require('./handlers/middleware');
 
 require('dotenv').config();
 
@@ -55,11 +59,16 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // Use routes
+app.get('/', isLoggedIn, (req, res) => {
+    res.json(req.user);
+})
+
 app.use('/', authRoutes);
 
-app.get('/', isLoggedIn, (req, res) => {
-    res.send('You are indeed logged in');
-})
+app.use('/user_define', userDefineRoutes);
+
+app.use('/workouts', workoutRoutes);
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`.cyan);
