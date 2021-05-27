@@ -4,7 +4,9 @@
 
 <ul>
   <li>.env file: 
-    <li>MONGO_URI=YOUR_MONGO_URI</li>
-    <li>PORT=EXAMPLE_PORT</li>
+    <ul>
+      <li>MONGO_URI=YOUR_MONGO_URI</li>
+      <li>PORT=EXAMPLE_PORT</li>
+    </ul>
   </li>
 </ul>
