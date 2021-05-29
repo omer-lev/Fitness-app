@@ -4,6 +4,9 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../models/User');
 
+const fbw = require('../workouts/fbw');
+const ab = require('../workouts/ab');
+
 const isLoggedIn = require('../handlers/middleware');
 const setWorkout = require('../handlers/setWorkout');
 
@@ -18,6 +21,7 @@ router.post('/', isLoggedIn, (req, res) => {
 
     const { height, weight, schedule } = req.body;
     const BMI = (weight / (height / 100)**2).toFixed(1);
+    const workout = setWorkout(BMI, parseInt(schedule));
 
     const updatedUser = {
         height: height,
@@ -26,16 +30,16 @@ router.post('/', isLoggedIn, (req, res) => {
         BMI: BMI
     };
 
-    User.findByIdAndUpdate(id, updatedUser, { new: true }, (err, user) => {
-        const { BMI, schedule } = req.user;
-
+    User.findByIdAndUpdate(id, updatedUser, { new: true, useFindAndModify: false }, (err, user) => {
         if (err) {
             console.log(err);
             req.flash('error', `${err}`)
             res.redirect('/user_define');
         } else {
-            const id = setWorkout(BMI, schedule);
-            res.redirect(`/workouts/${id}`);
+            user.excersizes = eval(workout);
+            user.save();
+
+            res.redirect(`/workouts/${workout}`);
         }
     })
 })

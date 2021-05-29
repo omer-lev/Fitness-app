@@ -17,6 +17,7 @@ const workoutRoutes = require('./routes/workout');
 
 // handlers
 const isLoggedIn = require('./handlers/middleware');
+const updateWeights = require('./handlers/updateWeights');
 
 require('dotenv').config();
 
@@ -57,6 +58,7 @@ passport.use(new passportLocal({ usernameField: 'email' }, User.authenticate()))
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
 
 // Use routes
 app.get('/', isLoggedIn, (req, res) => {

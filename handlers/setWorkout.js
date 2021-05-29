@@ -1,4 +1,4 @@
-function setWorkout(BMI, schedule) {
+const setWorkout = (BMI, schedule) => {
     switch (true) {
         case BMI > 0 && BMI <= 18.5:
             switch (schedule) {
@@ -16,7 +16,7 @@ function setWorkout(BMI, schedule) {
             switch(schedule) {
                 case 1:
                 case 2:
-                    return 'fbw';
+                    return 'ab';
                     break;
                 
                 default:

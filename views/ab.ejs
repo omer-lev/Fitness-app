@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB - Fitness App</title>
+</head>
+<body>
+    <%- include('partials/flash.ejs') %>
+
+    <h1>אימון AB</h1>
+    <br>
+
+    <h1>A:</h1>
+    <br>
+
+    <div class="chest">
+        <h1>חזה</h1>
+
+        <div class="1">
+            <h2><%= excersizes.chest[0].name %></h2>
+            <h3>סטים: <%= excersizes.chest[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.chest[0].reps %></h3>
+            <h3>משקל: <%= excersizes.chest[0].kg %></h3>
+        </div>
+
+        <div class="2">
+            <h2><%= excersizes.chest[1].name %></h2>
+            <h3>סטים: <%= excersizes.chest[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.chest[1].reps %></h3>
+            <h3>משקל: <%= excersizes.chest[1].kg %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.chest[2].name %></h2>
+            <h3>סטים: <%= excersizes.chest[2].sets %></h3>
+            <h3>חזרות: <%= excersizes.chest[2].reps %></h3>
+            <h3>משקל: <%= excersizes.chest[2].kg %></h3>
+        </div>
+    </div>
+
+    <div class="triceps">
+        <h1>יד אחורית</h1>
+
+        <div class="1">
+            <h2><%= excersizes.triceps[0].name %></h2>
+            <h3>סטים: <%= excersizes.triceps[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.triceps[0].reps %></h3>
+            <h3>משקל: <%= excersizes.triceps[0].kg %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.triceps[1].name %></h2>
+            <h3>סטים: <%= excersizes.triceps[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.triceps[1].reps %></h3>
+        </div>
+    </div>
+
+    <div class="back">
+        <h1>גב</h1>
+
+        <div class="1">
+            <h2><%= excersizes.back[0].name %></h2>
+            <h3>סטים: <%= excersizes.back[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.back[0].reps %></h3>
+            <h3>משקל: <%= excersizes.back[0].kg %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.back[1].name %></h2>
+            <h3>סטים: <%= excersizes.back[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.back[1].reps %></h3>
+            <h3>משקל: <%= excersizes.back[1].kg %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.back[2].name %></h2>
+            <h3>סטים: <%= excersizes.back[2].sets %></h3>
+            <h3>משקל: <%= excersizes.back[2].kg %></h3>
+            <h3>חזרות: <%= excersizes.back[2].reps %></h3>
+        </div>
+
+        <div class="4">
+            <h2><%= excersizes.back[3].name %></h2>
+            <h3>סטים: <%= excersizes.back[3].sets %></h3>
+            <h3>חזרות: <%= excersizes.back[3].reps %></h3>
+        </div>
+    </div>
+
+    <h1>B:</h1>
+    <br>
+
+    <div class="biceps">
+        <h1>יד קדמית</h1>
+
+        <div class="1">
+            <h2><%= excersizes.biceps[0].name %></h2>
+            <h3>סטים: <%= excersizes.biceps[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.biceps[0].reps %></h3>
+            <h3>משקל: <%= excersizes.biceps[0].kg %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.biceps[1].name %></h2>
+            <h3>סטים: <%= excersizes.biceps[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.biceps[1].reps %></h3>
+            <h3>משקל: <%= excersizes.biceps[1].kg %></h3>
+        </div>
+    </div>
+
+    
+    <div class="lowerBack">
+        <h1>גב תחתון</h1>
+        
+        <div class="1">
+            <h2><%= excersizes.lowerBack[0].name %></h2>
+            <h3>סטים: <%= excersizes.lowerBack[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.lowerBack[0].reps %></h3>
+            <h3>משקל: <%= excersizes.lowerBack[0].kg %></h3>
+        </div>
+    </div>
+
+    <div class="legs">
+        <h1>רגליים</h1>
+
+        <div class="1">
+            <h2><%= excersizes.legs[0].name %></h2>
+            <h3>סטים: <%= excersizes.legs[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.legs[0].reps %></h3>
+            <h3>משקל: <%= excersizes.legs[0].kg %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.legs[1].name %></h2>
+            <h3>סטים: <%= excersizes.legs[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.legs[1].reps %></h3>
+            <h3>משקל: <%= excersizes.legs[1].kg %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.legs[2].name %></h2>
+            <h3>סטים: <%= excersizes.legs[2].sets %></h3>
+            <h3>חזרות: <%= excersizes.legs[2].reps %></h3>
+            <h3>משקל: <%= excersizes.legs[2].kg %></h3>
+        </div>
+
+        <div class="4">
+            <h2><%= excersizes.legs[3].name %></h2>
+            <h3>סטים: <%= excersizes.legs[3].sets %></h3>
+            <h3>חזרות: <%= excersizes.legs[3].reps %></h3>
+            <h3>משקל: <%= excersizes.legs[3].kg %></h3>
+        </div>
+    </div>
+
+    <div class="shoulders">
+        <h1>כתפיים</h1>
+
+        <div class="1">
+            <h2><%= excersizes.shoulders[0].name %></h2>
+            <h3>סטים: <%= excersizes.shoulders[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.shoulders[0].reps %></h3>
+            <h3>משקל: <%= excersizes.shoulders[0].kg %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.shoulders[1].name %></h2>
+            <h3>סטים: <%= excersizes.shoulders[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.shoulders[1].reps %></h3>
+            <h3>משקל: <%= excersizes.shoulders[1].kg %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.shoulders[2].name %></h2>
+            <h3>סטים: <%= excersizes.shoulders[2].sets %></h3>
+            <h3>חזרות: <%= excersizes.shoulders[2].reps %></h3>
+            <h3>משקל: <%= excersizes.shoulders[2].kg %></h3>
+        </div>
+    </div>
+
+</body>
+</html>
