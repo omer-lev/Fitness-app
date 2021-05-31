@@ -1,7 +1,9 @@
 const fbw = {
+    name: "fbw",
+    
     trademill: [
         {
-            name: 'הליכון',
+            name: 'ריצה',
             duration: 10,
             url: 'https://www.youtube.com/watch?v=B2exKGkFp50&ab_channel=DanielOliel'
     
@@ -133,7 +135,6 @@ const fbw = {
     abs: [
         {
             name: 'כפיפות בטן',
-            bodyWeight: true,
             sets: 3,
             reps: 15,
             url: 'https://www.youtube.com/watch?v=MKmrqcoCZ-M&ab_channel=HowcastHowcast'
@@ -141,7 +142,6 @@ const fbw = {
 
         {
             name: 'בטן פנגווין',
-            bodyWeight: true,
             sets: 2,
             reps: 20,
             url: 'https://www.youtube.com/watch?v=mKilN1fjiso&ab_channel=HowcastHowcast%D7%9E%D7%90%D7%95%D7%9E%D7%AA'

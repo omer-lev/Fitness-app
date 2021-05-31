@@ -6,6 +6,10 @@ const User = require('../models/User');
 
 const fbw = require('../workouts/fbw');
 const ab = require('../workouts/ab');
+const abc = require('../workouts/abc');
+const aerobic = require('../workouts/aerobic');
+const aerobic_ab = require('../workouts/aerobic_ab');
+const aerobic_ab_switch = require('../workouts/aerobic_ab_switch');
 
 const isLoggedIn = require('../handlers/middleware');
 const setWorkout = require('../handlers/setWorkout');
@@ -21,7 +25,7 @@ router.post('/', isLoggedIn, (req, res) => {
 
     const { height, weight, schedule } = req.body;
     const BMI = (weight / (height / 100)**2).toFixed(1);
-    const workout = setWorkout(BMI, parseInt(schedule));
+    const workout = setWorkout(BMI, schedule);
 
     const updatedUser = {
         height: height,
@@ -30,15 +34,24 @@ router.post('/', isLoggedIn, (req, res) => {
         BMI: BMI
     };
 
+    const selectionPages = [
+        'fbw_or_abc', 
+        'fbw_or_aerobic_ab_switch', 
+        'fbw_or_ab', 
+        'fbw_or_aerobic'
+    ];
+
     User.findByIdAndUpdate(id, updatedUser, { new: true, useFindAndModify: false }, (err, user) => {
         if (err) {
             console.log(err);
             req.flash('error', `${err}`)
             res.redirect('/user_define');
         } else {
-            user.excersizes = eval(workout);
-            user.save();
-
+            if (selectionPages.indexOf(workout) == -1) {
+                user.excersizes = eval(workout);
+                user.save();
+            }
+            
             res.redirect(`/workouts/${workout}`);
         }
     })

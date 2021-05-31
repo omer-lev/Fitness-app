@@ -13,6 +13,6 @@ Node JS, Express, EJS, MongoDB, J-Query
  - After the workout, the user will return feedback on the difficulty of the workout (easy, medium, hard), workouts will be modified   accordingly ✓
 
 # Finishing
- - Page scructures
+ - Page scructures ✓
  - Design
  - Revisions

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Selection - Fitness App</title>
+</head>
+<body>
+    <h2>Please select one of the following workouts</h2>
+    <form action="/workouts/selection" method="POST">
+        <% switch(selection) {
+            case 'fbw_or_abc': %>
+                <button name="fbw">Full body workout</button>
+                <button name="abc">ABC workout</button>
+                <% break;
+
+            case 'fbw_or_aerobic_ab_switch': %>
+                <button name="fbw">Full body workout</button>
+                <button name="aerobic_ab">AB + Aerobic workout</button>
+                <% break;
+
+            case 'fbw_or_ab': %>
+                <button name="fbw">Full body workout</button>
+                <button name="ab">AB workout</button>
+                <% break;
+
+            case 'fbw_or_aerobic': %>
+                <button name="fbw">Full body workout</button>
+                <button name="aerobic">Aerobic workout</button>
+                <% break; } %>
+    </form>
+</body>
+</html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AB - Fitness App</title>
+    <title>Aerobic + AB - Fitness App</title>
 </head>
 <body>
     <%- include('partials/flash.ejs') %>
 
-    <h1>AB אימון</h1>
+    <h1>AB אימון + אירובי</h1>
     <br>
 
     <h1>A:</h1>
@@ -175,6 +175,48 @@
             <h3>סטים: <%= excersizes.shoulders[2].sets %></h3>
             <h3>חזרות: <%= excersizes.shoulders[2].reps %></h3>
             <h3>משקל: <%= excersizes.shoulders[2].kg %></h3>
+        </div>
+    </div>
+
+    <div class="trademill">
+        <h1>הליכון</h1>
+
+        <div class="1">
+            <h2><%= excersizes.trademill[0].name %></h2>
+            <h3>משך זמן: <%= excersizes.trademill[0].duration %> דקות</h3>
+            <h3>מהירות: <%= excersizes.trademill[0].speed %></h3>
+        </div>
+
+        <div class="2">
+            <h2><%= excersizes.trademill[1].name %></h2>
+            <h3>משך זמן: <%= excersizes.trademill[1].duration %> דקות</h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.trademill[2].name %></h2>
+            <h3>משך זמן: <%= excersizes.trademill[2].duration %> דקות</h3>
+        </div>
+    </div>
+
+    <div class="abs">
+        <h1>בטן</h1>
+
+        <div class="1">
+            <h2><%= excersizes.abs[0].name %></h2>
+            <h3>סטים: <%= excersizes.abs[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.abs[0].reps %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.abs[1].name %></h2>
+            <h3>סטים: <%= excersizes.abs[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.abs[1].reps %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.abs[2].name %></h2>
+            <h3>סטים: <%= excersizes.abs[2].sets %></h3>
+            <h3>משך זמן: <%= excersizes.abs[2].duration %></h3>
         </div>
     </div>
 </body>

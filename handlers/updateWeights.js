@@ -1,13 +1,18 @@
 const mongoose = require('mongoose');
 const User = require('../models/User');
 
-const updateWeights = (diff, excersizes) => {
-    const updatedKg = excersizes;
+const updateWeights = (diff, workouts, currentWorkout) => {
+    const updatedKg = workouts;
+    const index = updatedKg.findIndex(workout => workout.name === currentWorkout);
 
-    for (let i = 0; i < Object.keys(updatedKg).length; i++) {
-        for (let j = 0; j < updatedKg[Object.keys(updatedKg)[i]].length; j++) {
-            if (updatedKg[Object.keys(updatedKg)[i]][j].hasOwnProperty('kg')) {
-                updatedKg[Object.keys(updatedKg)[i]][j].kg += diff;
+    for (let j = 1; j < Object.keys(updatedKg[index]).length; j++) {
+        const excersizes = Object.keys(updatedKg[index])[j];
+
+        for (let x = 0; x < updatedKg[index][excersizes].length; x++) {
+            const excersize = updatedKg[index][excersizes][x];
+
+            if (excersize.hasOwnProperty('kg')) {
+                excersize.kg += diff;
             }
         }
     }

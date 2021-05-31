@@ -16,11 +16,11 @@ const setWorkout = (BMI, schedule) => {
             switch(schedule) {
                 case 1:
                 case 2:
-                    return 'ab';
+                    return 'fbw';
                     break;
                 
                 default:
-                    return 'fbw_abc';
+                    return 'fbw_or_abc';
                     break;
             }
 
@@ -31,26 +31,26 @@ const setWorkout = (BMI, schedule) => {
                     break;
                 
                 case 2:
-                    return 'aerobic_ab_switch';
+                    return 'fbw_or_aerobic_ab_switch';
                     break;
                 
                 default:
-                    return 'fbw_ab';
+                    return 'fbw_or_ab';
                     break;
             }
 
         case BMI > 30 && BMI <= 35:
             switch(schedule) {
                 case 1:
-                    return 'fbw_aerobic';
+                    return 'fbw_or_aerobic';
                     break;
                 
                 case 2:
-                    return 'aerobic_ab_switch';
+                    return 'fbw_or_aerobic_ab_switch';
                     break;
                 
                 default:
-                    return 'ab_aerobic';
+                    return 'aerobic_ab';
                     break;
             }
         
@@ -65,7 +65,7 @@ const setWorkout = (BMI, schedule) => {
                     break;
                 
                 default:
-                    return 'ab_aerobic';
+                    return 'aerobic_ab';
                     break;
             }
         

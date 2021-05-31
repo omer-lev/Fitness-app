@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AB - Fitness App</title>
+    <title>ABC - Fitness App</title>
+
+    <style>
+        * {
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
-    <%- include('partials/flash.ejs') %>
-
-    <h1>AB אימון</h1>
+    <h1>ABC אימון</h1>
     <br>
-
     <h1>A:</h1>
-    <br>
-
+    
     <div class="chest">
         <h1>חזה</h1>
 
@@ -54,8 +56,40 @@
             <h2><%= excersizes.triceps[1].name %></h2>
             <h3>סטים: <%= excersizes.triceps[1].sets %></h3>
             <h3>חזרות: <%= excersizes.triceps[1].reps %></h3>
+            <h3>משקל: <%= excersizes.triceps[1].kg %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.triceps[2].name %></h2>
+            <h3>סטים: <%= excersizes.triceps[2].sets %></h3>
+            <h3>חזרות: <%= excersizes.triceps[2].reps %></h3>
         </div>
     </div>
+
+    <div class="abs">
+        <h1>בטן</h1>
+
+        <div class="1">
+            <h2><%= excersizes.abs[0].name %></h2>
+            <h3>סטים: <%= excersizes.abs[0].sets %></h3>
+            <h3>חזרות: <%= excersizes.abs[0].reps %></h3>
+        </div>
+        
+        <div class="2">
+            <h2><%= excersizes.abs[1].name %></h2>
+            <h3>סטים: <%= excersizes.abs[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.abs[1].reps %></h3>
+        </div>
+
+        <div class="3">
+            <h2><%= excersizes.abs[2].name %></h2>
+            <h3>סטים: <%= excersizes.abs[2].sets %></h3>
+            <h3>משך זמן: <%= excersizes.abs[2].duration %></h3>
+        </div>
+    </div>
+
+    <br>
+    <h1>B:</h1>
 
     <div class="back">
         <h1>גב</h1>
@@ -75,10 +109,10 @@
         </div>
 
         <div class="3">
-            <h2><%= excersizes.back[2].name %></h2>
-            <h3>סטים: <%= excersizes.back[2].sets %></h3>
-            <h3>משקל: <%= excersizes.back[2].kg %></h3>
-            <h3>חזרות: <%= excersizes.back[2].reps %></h3>
+            <h2><%= excersizes.back[1].name %></h2>
+            <h3>סטים: <%= excersizes.back[1].sets %></h3>
+            <h3>חזרות: <%= excersizes.back[1].reps %></h3>
+            <h3>משקל: <%= excersizes.back[1].kg %></h3>
         </div>
 
         <div class="4">
@@ -87,9 +121,6 @@
             <h3>חזרות: <%= excersizes.back[3].reps %></h3>
         </div>
     </div>
-
-    <h1>B:</h1>
-    <br>
 
     <div class="biceps">
         <h1>יד קדמית</h1>
@@ -109,7 +140,6 @@
         </div>
     </div>
 
-    
     <div class="lowerBack">
         <h1>גב תחתון</h1>
         
@@ -117,9 +147,11 @@
             <h2><%= excersizes.lowerBack[0].name %></h2>
             <h3>סטים: <%= excersizes.lowerBack[0].sets %></h3>
             <h3>חזרות: <%= excersizes.lowerBack[0].reps %></h3>
-            <h3>משקל: <%= excersizes.lowerBack[0].kg %></h3>
         </div>
     </div>
+
+    <br>
+    <h1>C:</h1>
 
     <div class="legs">
         <h1>רגליים</h1>
@@ -127,7 +159,7 @@
         <div class="1">
             <h2><%= excersizes.legs[0].name %></h2>
             <h3>סטים: <%= excersizes.legs[0].sets %></h3>
-            <h3>חזרות: <%= excersizes.legs[0].reps %></h3>
+            <h3><%= excersizes.legs[0].reps %></h3>
             <h3>משקל: <%= excersizes.legs[0].kg %></h3>
         </div>
         
@@ -143,13 +175,6 @@
             <h3>סטים: <%= excersizes.legs[2].sets %></h3>
             <h3>חזרות: <%= excersizes.legs[2].reps %></h3>
             <h3>משקל: <%= excersizes.legs[2].kg %></h3>
-        </div>
-
-        <div class="4">
-            <h2><%= excersizes.legs[3].name %></h2>
-            <h3>סטים: <%= excersizes.legs[3].sets %></h3>
-            <h3>חזרות: <%= excersizes.legs[3].reps %></h3>
-            <h3>משקל: <%= excersizes.legs[3].kg %></h3>
         </div>
     </div>
 
@@ -177,5 +202,13 @@
             <h3>משקל: <%= excersizes.shoulders[2].kg %></h3>
         </div>
     </div>
+
+    <form action="/workouts" method="POST">
+        <h2>דרג את קושי האימון</h2>
+    
+        <button type="submit" name="-2">קשה מדי</button>
+        <button type="submit" name="0">מעולה</button>
+        <button type="submit" name="2">קל מידי</button>
+    </form>
 </body>
 </html>
