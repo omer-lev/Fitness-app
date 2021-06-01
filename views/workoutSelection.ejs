@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Selection - Fitness App</title>
+
+    <link rel="stylesheet" href="/styles/workout_selection.css">
+
+    <%- include('partials/includes.ejs') %>
 </head>
 <body>
-    <h2>Please select one of the following workouts</h2>
-    <form action="/workouts/selection" method="POST">
-        <% switch(selection) {
-            case 'fbw_or_abc': %>
-                <button name="fbw">Full body workout</button>
-                <button name="abc">ABC workout</button>
-                <% break;
+    <%- include('partials/header.ejs') %>
 
-            case 'fbw_or_aerobic_ab_switch': %>
-                <button name="fbw">Full body workout</button>
-                <button name="aerobic_ab">AB + Aerobic workout</button>
-                <% break;
+    <div class="container">
+        <div class="form">
+            <h1>Please select one of the following workouts</h1>
 
-            case 'fbw_or_ab': %>
-                <button name="fbw">Full body workout</button>
-                <button name="ab">AB workout</button>
-                <% break;
-
-            case 'fbw_or_aerobic': %>
-                <button name="fbw">Full body workout</button>
-                <button name="aerobic">Aerobic workout</button>
-                <% break; } %>
-    </form>
+            <form action="/workouts/selection" method="POST">
+                <% switch(selection) {
+                    case 'fbw_or_abc': %>
+                        <button name="fbw">Full body workout</button>
+                        <button name="abc">ABC workout</button>
+                        <% break;
+        
+                    case 'fbw_or_aerobic_ab_switch': %>
+                        <button name="fbw">Full body workout</button>
+                        <button name="aerobic_ab">AB + Aerobic workout</button>
+                        <% break;
+        
+                    case 'fbw_or_ab': %>
+                        <button name="fbw">Full body workout</button>
+                        <button name="ab">AB workout</button>
+                        <% break;
+        
+                    case 'fbw_or_aerobic': %>
+                        <button name="fbw">Full body workout</button>
+                        <button name="aerobic">Aerobic workout</button>
+                        <% break; } %>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

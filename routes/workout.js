@@ -75,7 +75,7 @@ router.get('/:id', isLoggedIn, (req, res) => {
 
         for (let i = 0; i < req.user.workouts.length; i++) {
             if (JSON.stringify(req.user.workouts[i].name) == JSON.stringify(workout)) {
-                res.render(`${workout}`, { excersizes: req.user.workouts[i] });
+                res.render(`workouts/${workout}`, { excersizes: req.user.workouts[i] });
             }
         }
     }

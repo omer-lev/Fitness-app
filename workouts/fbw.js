@@ -6,7 +6,6 @@ const fbw = {
             name: 'ריצה',
             duration: 10,
             url: 'https://www.youtube.com/watch?v=B2exKGkFp50&ab_channel=DanielOliel'
-    
         },
     ],
     

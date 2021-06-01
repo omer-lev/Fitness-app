@@ -62,7 +62,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Use routes
 app.get('/', isLoggedIn, (req, res) => {
-    res.json(req.user);
+    res.render('home');
 })
 
 app.use('/', authRoutes);

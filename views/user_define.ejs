@@ -5,26 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User define - Fitness App</title>
+
+    <link rel="stylesheet" href="/styles/user_define.css">
+
+    <%- include('partials/includes.ejs') %>
 </head>
 <body>
-    <%- include('partials/flash.ejs') %>
+    <%- include('partials/header.ejs') %>
 
-    <h2>Getting started</h2>
+    <div class="container">
+        <div class="form">
+            <h1>Getting started</h1>
 
-    <form action="/user_define" method="POST">
-        <div class="height">
-            <input type="number" name="height" placeholder="Height in CM: ">
+            <form action="/user_define" method="POST">
+                <div class="height">
+                    <input type="number" name="height" placeholder="Height in CM: ">
+                </div>
+        
+                <div class="weight">
+                    <input type="number" name="weight" placeholder="Weight in KG: ">
+                </div>
+        
+                <div class="schedule">
+                    <input type="number" name="schedule" placeholder="Workouts per week: ">
+                </div>
+        
+                <button type="submit">Continue</button>
+            </form>
         </div>
-
-        <div class="weight">
-            <input type="number" name="weight" placeholder="Weight in KG: ">
-        </div>
-
-        <div class="schedule">
-            <input type="number" name="schedule" placeholder="Workouts per week: ">
-        </div>
-
-        <button type="submit">Continue</button>
-    </form>
+    </div>
 </body>
 </html>

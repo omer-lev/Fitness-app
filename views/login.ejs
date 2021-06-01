@@ -5,24 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Fitness App</title>
+
+    <link rel="stylesheet" href="/styles/login.css">
+
+    <%- include('partials/includes.ejs') %>
 </head>
 <body>
-    <%- include('partials/flash.ejs') %>
+    <%- include('partials/header.ejs') %>
 
-    <h1>Login</h1>
+    <div class="container">
+        <div class="form">
+            <h1>Login</h1>
+    
+            <form action="/login" method="POST">
+                <div class="email">
+                    <input type="text" placeholder="Email: " name="email" required>
+                </div>
+        
+                <div class="password">
+                    <input type="password" placeholder="Password: " name="password" required>
+                </div>
+        
+                <button type="submit">Login</button>
+            </form>
 
-    <form action="/login" method="POST">
-        <div class="email">
-            <input type="text" placeholder="Email: " name="email" required>
+            <div class="register">
+                <a href="/register">Register</a>
+            </div>
         </div>
-
-        <div class="password">
-            <input type="password" placeholder="Password: " name="password" required>
-        </div>
-
-        <button type="submit">Login</button>
-    </form>
-
-    <a href="/register">Register</a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,20 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #255478;
+    font-weight: 300;
+}
+
+.nav div {
+    padding: 2vh 2vw;
+    color: #fff;
+}
+
+.nav .main {
+    font-size: 24px;
+}
+
+.nav .links {
+    font-size: 18px;
+}

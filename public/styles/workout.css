@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.workout {
+    display: inline-block;
+    background-color: #4996da;
+    padding-bottom: 6vh;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.315);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+.title h1 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+    font-weight: 400;
+}
+
+.name {
+    width: 100%;
+    background-color: #003F75;
+    padding: 1vh 20vw;
+}
+
+.name h2 {
+    font-weight: 400;
+}
+
+.excersize h2 {
+    font-weight: 400;
+    margin: 2vh 0 3vh 0;
+}
+
+.excersize ul {
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 15px;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.video img {
+    cursor: pointer;
+}
