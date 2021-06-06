@@ -6,9 +6,11 @@
 
 .workout {
     display: inline-block;
+    width: 50vw;
     background-color: #4996da;
-    padding-bottom: 6vh;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.315);
+    padding-bottom: 4vh;
+    margin-bottom: 4vh;
 }
 
 .title {
@@ -25,7 +27,7 @@
 .name {
     width: 100%;
     background-color: #003F75;
-    padding: 1vh 20vw;
+    padding: 1vh 0;
 }
 
 .name h2 {
@@ -51,4 +53,52 @@
 
 .video img {
     cursor: pointer;
+}
+
+form {
+    margin-top: 5vh;
+    padding: 3vh 0 3.5vh 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.322);
+}
+
+form h2 {
+    font-weight: 400;
+    margin-bottom: 2vh;
+}
+
+#feedback button {
+    width: 4vw;
+    height: 3.5vh;
+    cursor: pointer;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.315);
+    font-size: 14px;
+    background-color: #003F75;
+}
+
+#done button {
+    width: 6.5vw;
+    height: 4.5vh;
+    cursor: pointer;
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.315);
+    font-size: 16px;
+    background-color: #003F75;
+}
+
+.view iframe {
+    width: 30vw;
+    height: 30vh;
+}
+
+@media (max-width: 1200px) {
+    .workout {
+        width: 70vw;
+    }
+
+    .view iframe {
+        width: 40vw;
+    }
 }

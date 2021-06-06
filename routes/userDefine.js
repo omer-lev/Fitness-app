@@ -17,7 +17,7 @@ const setWorkout = require('../handlers/setWorkout');
 
 
 router.get('/', isLoggedIn, (req, res) => {
-    req.user.workouts.length > 0 ? res.redirect('/workouts') : res.render('user_define');;
+    req.user.workouts.length > 0 ? res.redirect('/workouts') : res.render('user_define');
 })
 
 router.post('/', isLoggedIn, (req, res) => {
@@ -25,7 +25,6 @@ router.post('/', isLoggedIn, (req, res) => {
 
     const { height, weight, schedule } = req.body;
     const BMI = (weight / (height / 100)**2).toFixed(1);
-    const workout = setWorkout(BMI, schedule);
 
     const updatedUser = {
         height: height,
@@ -47,12 +46,14 @@ router.post('/', isLoggedIn, (req, res) => {
             req.flash('error', `${err}`)
             res.redirect('/user_define');
         } else {
-            if (selectionPages.indexOf(workout) == -1) {
-                user.excersizes = eval(workout);
+            const workoutName = setWorkout(user.BMI, user.schedule);
+
+            if (selectionPages.indexOf(setWorkout(user.BMI, user.schedule)) == -1) {
+                user.workouts = eval(workoutName);
                 user.save();
             }
             
-            res.redirect(`/workouts/${workout}`);
+            res.redirect(`/workouts/${workoutName}`);
         }
     })
 })

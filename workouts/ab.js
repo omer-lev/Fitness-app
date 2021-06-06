@@ -1,13 +1,14 @@
 const ab = {
     name: "ab",
-    
+
     chest: [
         {
             name: 'לחיצת חזה כנגד משקולות יד בשיפוע חיבוי',
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=fnDM2jJ2yeI&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/fnDM2jJ2yeI',
+            day: 'A'
         },
 
         {
@@ -15,7 +16,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=QwuUZ5wgQOk&t=51s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/QwuUZ5wgQOk?start=1',
+            day: 'A'
         },
 
         {
@@ -23,7 +25,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 18,
-            url: 'https://www.youtube.com/watch?v=hTtrux70vGs&ab_channel=LidorDayanLidorDayan'
+            url: 'https://www.youtube.com/embed/hTtrux70vGs',
+            day: 'A'
         }
     ],
 
@@ -33,14 +36,16 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=8fm_4LWtgVM&t=30s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/8fm_4LWtgVM?start=30',
+            day: 'A'
         },
 
         {
             name: 'מקבילים באחיזה צרה',
             sets: 3,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=4la6BkUBLgo&t=1s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/4la6BkUBLgo?start=1',
+            day: 'A'
         }
     ],
 
@@ -50,7 +55,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=pix9e8-SIpM&t=35s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/pix9e8-SIpM?start=35',
+            day: 'A'
         },
 
         {
@@ -58,7 +64,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=lueEJGjTuPQ&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/lueEJGjTuPQ',
+            day: 'A'
         },
 
         {
@@ -66,14 +73,17 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=hYSo7veljQs'
+            url: 'https://www.youtube.com/embed/hYSo7veljQs',
+            day: 'A'
         },
 
         {
             name: 'מתח באחיזה רחבה',
             sets: 2,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=WXMKjV11lAk&t=19s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/WXMKjV11lAk?start=19',
+            day: 'A',
+            last: true
         }
     ],
 
@@ -83,7 +93,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 10,
-            url: 'https://www.youtube.com/watch?v=kwG2ipFRgfo'
+            url: 'https://www.youtube.com/embed/kwG2ipFRgfo',
+            day: 'B'
         },
 
         {
@@ -91,7 +102,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=b7phYAO4EJY&t=29s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/b7phYAO4EJY?start=29',
+            day: 'B'
         }
     ],
 
@@ -100,7 +112,8 @@ const ab = {
             name: 'פשיטת גב על כיסא ייעודי',
             sets: 3,
             reps: 12,
-            url: 'https://www.youtube.com/watch?v=qtjJUWCnDyE&t=47s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/qtjJUWCnDyE?start=47',
+            day: 'B'
         }
     ],
 
@@ -110,7 +123,8 @@ const ab = {
             sets: 4,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/watch?v=g9xe7PPON6c&t=24s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/g9xe7PPON6c?start=24',
+            day: 'B'
         },
 
         {
@@ -118,7 +132,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/Xn7yJcrA7QM',
+            day: 'B'
         },
 
         {
@@ -126,7 +141,8 @@ const ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/yR_LqZYSIgM?start=16',
+            day: 'B'
         },
 
         {
@@ -134,7 +150,8 @@ const ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/jxctD6fL_FQ?start=1',
+            day: 'B'
         }
     ],
 
@@ -144,7 +161,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/watch?v=sxeY7kMYhLc'
+            url: 'https://www.youtube.com/embed/sxeY7kMYhLc',
+            day: 'B'
         },
 
         {
@@ -152,7 +170,8 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/watch?v=0JfYxMRsUCQ&ab_channel=Bodybuilding.comBodybuilding.com'
+            url: 'https://www.youtube.com/embed/0JfYxMRsUCQ',
+            day: 'B'
         },
 
         {
@@ -160,7 +179,9 @@ const ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/watch?v=SCkitqdcPiM&t=38s'
+            url: 'https://www.youtube.com/embed/SCkitqdcPiM?start=38',
+            day: 'B',
+            last: true
         }
     ]
 }

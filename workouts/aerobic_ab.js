@@ -7,7 +7,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=fnDM2jJ2yeI&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/fnDM2jJ2yeI'
         },
 
         {
@@ -15,7 +15,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=QwuUZ5wgQOk&t=51s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/QwuUZ5wgQOk'
         },
 
         {
@@ -23,7 +23,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 18,
-            url: 'https://www.youtube.com/watch?v=hTtrux70vGs&ab_channel=LidorDayanLidorDayan'
+            url: 'https://www.youtube.com/embed/hTtrux70vGs'
         }
     ],
 
@@ -33,14 +33,14 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=8fm_4LWtgVM&t=30s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/8fm_4LWtgVM?start=30'
         },
 
         {
             name: 'מקבילים באחיזה צרה',
             sets: 3,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=4la6BkUBLgo&t=1s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/4la6BkUBLgo?start=1'
         }
     ],
 
@@ -50,7 +50,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=pix9e8-SIpM&t=35s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/pix9e8-SIpM?start=35'
         },
 
         {
@@ -58,7 +58,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=lueEJGjTuPQ&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/lueEJGjTuPQ'
         },
 
         {
@@ -66,14 +66,14 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=hYSo7veljQs'
+            url: 'https://www.youtube.com/embed/hYSo7veljQs'
         },
 
         {
             name: 'מתח באחיזה רחבה',
             sets: 2,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=WXMKjV11lAk&t=19s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/WXMKjV11lAk?start=19'
         }
     ],
 
@@ -83,7 +83,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 10,
-            url: 'https://www.youtube.com/watch?v=kwG2ipFRgfo'
+            url: 'https://www.youtube.com/embed/kwG2ipFRgfo'
         },
 
         {
@@ -91,7 +91,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=b7phYAO4EJY&t=29s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/b7phYAO4EJY?start=29'
         }
     ],
 
@@ -100,7 +100,7 @@ const aerobic_ab = {
             name: 'פשיטת גב על כיסא ייעודי',
             sets: 3,
             reps: 12,
-            url: 'https://www.youtube.com/watch?v=qtjJUWCnDyE&t=47s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/qtjJUWCnDyE'
         }
     ],
 
@@ -110,7 +110,7 @@ const aerobic_ab = {
             sets: 4,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/watch?v=g9xe7PPON6c&t=24s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/g9xe7PPON6c?start=24'
         },
 
         {
@@ -118,7 +118,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/Xn7yJcrA7QM'
         },
 
         {
@@ -126,7 +126,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/yR_LqZYSIgM?start=16'
         },
 
         {
@@ -134,7 +134,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/jxctD6fL_FQ?start=1'
         }
     ],
 
@@ -144,7 +144,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/watch?v=sxeY7kMYhLc'
+            url: 'https://www.youtube.com/embed/sxeY7kMYhLc'
         },
 
         {
@@ -152,7 +152,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/watch?v=0JfYxMRsUCQ&ab_channel=Bodybuilding.comBodybuilding.com'
+            url: 'https://www.youtube.com/embed/0JfYxMRsUCQ'
         },
 
         {
@@ -160,7 +160,7 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/watch?v=SCkitqdcPiM&t=38s'
+            url: 'https://www.youtube.com/embed/SCkitqdcPiM?start=38'
         }
     ],
 
@@ -169,19 +169,19 @@ const aerobic_ab = {
             name: 'ריצה',
             duration: 40,
             speed: 7,
-            url: 'https://www.youtube.com/watch?v=B2exKGkFp50'
+            url: 'https://www.youtube.com/embed/B2exKGkFp50'
         },
 
         {
             name: 'אופניים במכונה',
             duration: 20,
-            url: 'https://www.youtube.com/watch?v=0bbsSmqLtXk'
+            url: 'https://www.youtube.com/embed/0bbsSmqLtXk'
         },
 
         {
             name: 'מדרגות במכונה',
             duration: 20,
-            url: 'https://www.youtube.com/watch?v=Ay0rlthn5aM'
+            url: 'https://www.youtube.com/embed/Ay0rlthn5aM'
         },
     ],
 
@@ -190,21 +190,21 @@ const aerobic_ab = {
             name: 'כפיפות בטן',
             sets: 3,
             reps: 15,
-            url: 'https://www.youtube.com/watch?v=MKmrqcoCZ-M'
+            url: 'https://www.youtube.com/embed/MKmrqcoCZ-M'
         },
 
         {
             name: 'בטן פנגווין',
             sets: 3,
             reps: 20,
-            url: 'https://www.youtube.com/watch?v=mKilN1fjiso'
+            url: 'https://www.youtube.com/embed/mKilN1fjiso'
         },
 
         {
             name: 'פלנק / בטן סטטית',
             duration: "דקה",
             sets: 2,
-            url: 'https://www.youtube.com/watch?v=k1x811LYuJA'
+            url: 'https://www.youtube.com/embed/k1x811LYuJA'
         }
     ]
 }

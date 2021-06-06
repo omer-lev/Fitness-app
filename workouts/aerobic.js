@@ -6,19 +6,19 @@ const aerobic = {
             name: 'ריצה',
             duration: 40,
             speed: 7,
-            url: 'https://www.youtube.com/watch?v=B2exKGkFp50'
+            url: 'https://www.youtube.com/embed/B2exKGkFp50'
         },
 
         {
             name: 'אופניים במכונה',
             duration: 20,
-            url: 'https://www.youtube.com/watch?v=0bbsSmqLtXk'
+            url: 'https://www.youtube.com/embed/0bbsSmqLtXk'
         },
 
         {
             name: 'מדרגות במכונה',
             duration: 20,
-            url: 'https://www.youtube.com/watch?v=Ay0rlthn5aM'
+            url: 'https://www.youtube.com/embed/Ay0rlthn5aM'
         },
     ],
 
@@ -27,21 +27,21 @@ const aerobic = {
             name: 'כפיפות בטן',
             sets: 3,
             reps: 15,
-            url: 'https://www.youtube.com/watch?v=MKmrqcoCZ-M'
+            url: 'https://www.youtube.com/embed/MKmrqcoCZ-M'
         },
 
         {
             name: 'בטן פנגווין',
             sets: 3,
             reps: 20,
-            url: 'https://www.youtube.com/watch?v=mKilN1fjiso'
+            url: 'https://www.youtube.com/embed/mKilN1fjiso'
         },
 
         {
             name: 'פלנק / בטן סטטית',
             duration: "דקה",
             sets: 2,
-            url: 'https://www.youtube.com/watch?v=k1x811LYuJA'
+            url: 'https://www.youtube.com/embed/k1x811LYuJA'
         }
     ]
 }

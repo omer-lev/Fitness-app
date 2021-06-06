@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/User');
-
 const fbw = require('../workouts/fbw');
+
 const ab = require('../workouts/ab');
 const abc = require('../workouts/abc');
+
 const aerobic = require('../workouts/aerobic');
 const aerobic_ab = require('../workouts/aerobic_ab');
 const aerobic_ab_switch = require('../workouts/aerobic_ab_switch');
@@ -49,13 +50,24 @@ router.post('/', isLoggedIn, (req, res) => {
             req.flash('error', `${err}`);
             res.redirect(`/workouts/${workout}`);
         } else {
+            updateWorkoutDay(req);
+
+            req.user.save();
             res.redirect('/');
         }
     })
 })
 
+router.post('/done', isLoggedIn, (req, res) => {
+    updateWorkoutDay(req);
+
+    req.user.save();
+    res.redirect('/');
+})
+
 router.get('/:id', isLoggedIn, (req, res) => {
     const workout = req.params.id;
+    let t_index = 1;
 
     const selectionPages = [
         'fbw_or_abc', 
@@ -64,18 +76,60 @@ router.get('/:id', isLoggedIn, (req, res) => {
         'fbw_or_aerobic'
     ];
 
-    
     if (selectionPages.indexOf(workout) != -1) {
         res.render('workoutSelection', { selection: req.params.id });
     } else {
         switchExcersizes(req, workout);
 
-        req.user.currentWorkout = workout;
-        req.user.save();
+        switch (workout) {
+            case "ab":
+                switch (req.user.currentDay) {
+                    case "a":
+                        t_index = 1;
+                        break;
+                
+                    case "b":
+                        t_index = 4;
+                        break;
+                
+                    default:
+                        break;
+                }
+                break;
+        
+            case "abc":
+                switch (req.user.currentDay) {
+                    case "a":
+                        t_index = 1;
+                        console.log("A day");
+                        break;
+                
+                    case "b":
+                        t_index = 4;
+                        console.log("B day");
+                        break;
+
+                    case "c":
+                        t_index = 7;
+                        console.log("C day");
+                        break;
+                
+                    default:
+                        break;
+                }
+                break;
+        
+            default:
+                break;
+        }
 
         for (let i = 0; i < req.user.workouts.length; i++) {
             if (JSON.stringify(req.user.workouts[i].name) == JSON.stringify(workout)) {
-                res.render(`workouts/${workout}`, { excersizes: req.user.workouts[i] });
+                res.render(`workouts/${workout}`, {
+                    excersizes: req.user.workouts[i], 
+                    index: t_index, 
+                    firstExcersize: req.user.workouts[i][Object.keys(req.user.workouts[i])[t_index]][0] 
+                });
             }
         }
     }
@@ -87,5 +141,25 @@ router.post('/selection', (req, res) => {
     switchExcersizes(req, workout);
     res.redirect(`/workouts/${workout}`);
 })
+
+
+const updateWorkoutDay = (req) => {
+    switch (req.user.currentDay) {
+        case "a":
+            req.user.currentDay = "b"
+            break;
+    
+        case "b":
+            req.user.currentDay = "c"
+            break;
+    
+        case "c":
+            req.user.currentDay = "a"
+            break;
+    
+        default:
+            break;
+    }
+}
 
 module.exports = router;

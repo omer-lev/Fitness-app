@@ -1,13 +1,14 @@
-const fbw = {
+const abc = {
     name: "abc",
-    
+
     chest: [
         {
             name: 'לחיצת חזה כנגד משקולות יד בשיפוע חיובי',
             sets: 3,
             reps: 9,
             kg: 10,
-            url: 'https://www.youtube.com/watch?v=fnDM2jJ2yeI'
+            url: 'https://www.youtube.com/embed/fnDM2jJ2yeI',
+            day: 'A'
         },
 
         {
@@ -15,7 +16,8 @@ const fbw = {
             sets: 3,
             reps: 8,
             kg: 10,
-            url: 'https://www.youtube.com/watch?v=QwuUZ5wgQOk&t=51s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/QwuUZ5wgQOk',
+            day: 'A'
         },
 
         {
@@ -23,7 +25,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 20,
-            url: 'https://www.youtube.com/watch?v=hTtrux70vGs'
+            url: 'https://www.youtube.com/embed/hTtrux70vGs',
+            day: 'A'
         }
     ],
 
@@ -33,7 +36,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 12,
-            url: 'https://www.youtube.com/watch?v=HyqTb_jE_oI&t=29s'
+            url: 'https://www.youtube.com/embed/HyqTb_jE_oI&t=29',
+            day: 'A'
         },
 
         {
@@ -41,14 +45,16 @@ const fbw = {
             sets: 3,
             reps: 8,
             kg: 20,
-            url: 'https://www.youtube.com/watch?v=8fm_4LWtgVM&t=30s'
+            url: 'https://www.youtube.com/embed/8fm_4LWtgVM&t=30',
+            day: 'A'
         },
 
         {
             name: 'מקבילים באחיזה צרה',
             sets: 3,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=4la6BkUBLgo&t=1s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/4la6BkUBLgo&t=1',
+            day: 'A'
         }
     ],
 
@@ -57,21 +63,25 @@ const fbw = {
             name: 'כפיפות בטן',
             sets: 3,
             reps: 15,
-            url: 'https://www.youtube.com/watch?v=MKmrqcoCZ-M&ab_channel=HowcastHowcast'
+            url: 'https://www.youtube.com/embed/MKmrqcoCZ-M',
+            day: 'A'
         },
 
         {
             name: 'בטן פנגווין',
             sets: 2,
             reps: 20,
-            url: 'https://www.youtube.com/watch?v=mKilN1fjiso&ab_channel=HowcastHowcast%D7%9E%D7%90%D7%95%D7%9E%D7%AA'
+            url: 'https://www.youtube.com/embed/mKilN1fjiso',
+            day: 'A'
         },
 
         {
             name: 'פלנק / בטן סטטית',
             duration: 1,
             sets: 2,
-            url: 'https://www.youtube.com/watch?v=k1x811LYuJA'
+            url: 'https://www.youtube.com/embed/k1x811LYuJA',
+            day: 'A',
+            last: true
         }
     ],
 
@@ -81,7 +91,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 34,
-            url: 'https://www.youtube.com/watch?v=pix9e8-SIpM&t=35s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/pix9e8-SIpM&t=35',
+            day: 'B'
         },
 
         {
@@ -89,7 +100,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 34,
-            url: 'https://www.youtube.com/watch?v=lueEJGjTuPQ&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/lueEJGjTuPQ',
+            day: 'B'
         },
 
         {
@@ -97,14 +109,16 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 34,
-            url: 'https://www.youtube.com/watch?v=hYSo7veljQs'
+            url: 'https://www.youtube.com/embed/hYSo7veljQs',
+            day: 'B'
         },
 
         {
             name: 'מתח באחיזה רחבה',
             sets: 3,
-            reps: "עד כשל שריר",
-            url: 'https://www.youtube.com/watch?v=WXMKjV11lAk&t=19s&ab_channel=Bodybuilding.com'
+            reps: "max",
+            url: 'https://www.youtube.com/embed/WXMKjV11lAk&t=19',
+            day: 'B'
         }
     ],
 
@@ -114,7 +128,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 12,
-            url: 'https://www.youtube.com/watch?v=kwG2ipFRgfo'
+            url: 'https://www.youtube.com/embed/kwG2ipFRgfo',
+            day: 'B'
         },
 
         {
@@ -122,7 +137,8 @@ const fbw = {
             sets: 3,
             reps: 8,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=b7phYAO4EJY&t=29s&ab_channel=ONEBODY.co.il%7C%D7%95%D7%95%D7%90%D7%9F%D7%91%D7%95%D7%93%D7%99'
+            url: 'https://www.youtube.com/embed/b7phYAO4EJY&t=29',
+            day: 'B'
         }
     ],
 
@@ -131,7 +147,9 @@ const fbw = {
             name: 'פשיטת גב על כיסא ייעודי',
             sets: 3,
             reps: 10,
-            url: 'https://www.youtube.com/watch?v=qtjJUWCnDyE&t=47s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/qtjJUWCnDyE&t=47',
+            day: 'B',
+            last: true
         }
     ],
 
@@ -141,7 +159,8 @@ const fbw = {
             sets: 4,
             reps: "כמות חזרות יורדת בהדרגה: 6-8-10-12",
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=g9xe7PPON6c&t=24s'
+            url: 'https://www.youtube.com/embed/g9xe7PPON6c&t=24',
+            day: 'C'
         },
 
         {
@@ -149,7 +168,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 34,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/Xn7yJcrA7QM',
+            day: 'C'
         },
 
         {
@@ -157,7 +177,8 @@ const fbw = {
             sets: 3,
             reps: 14,
             kg: 20,
-            url: 'https://www.youtube.com/watch?v=yR_LqZYSIgM&t=16s&ab_channel=Bodybuilding.com'
+            url: 'https://www.youtube.com/embed/yR_LqZYSIgM&t=16',
+            day: 'C'
         },
 
         {
@@ -165,7 +186,8 @@ const fbw = {
             sets: 3,
             reps: 14,
             kg: 20,
-            url: 'https://www.youtube.com/watch?v=jxctD6fL_FQ&t=1s'
+            url: 'https://www.youtube.com/embed/jxctD6fL_FQ&t=1',
+            day: 'C'
         }
     ],
 
@@ -175,7 +197,8 @@ const fbw = {
             sets: 3,
             reps: 8,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=sxeY7kMYhLc'
+            url: 'https://www.youtube.com/embed/sxeY7kMYhLc',
+            day: 'C'
         },
 
         {
@@ -183,7 +206,8 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=0JfYxMRsUCQ'
+            url: 'https://www.youtube.com/embed/0JfYxMRsUCQ',
+            day: 'C'
         },
 
         {
@@ -191,9 +215,11 @@ const fbw = {
             sets: 3,
             reps: 10,
             kg: 8,
-            url: 'https://www.youtube.com/watch?v=SCkitqdcPiM&t=38s'
+            url: 'https://www.youtube.com/embed/SCkitqdcPiM&t=38',
+            day: 'C',
+            last: true
         }
     ]
-};
+}
 
-module.exports = fbw;
+module.exports = abc;
