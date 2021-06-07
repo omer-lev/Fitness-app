@@ -21,8 +21,11 @@ const switchExcersizes = (req, workout) => {
         req.user.workouts.push(eval(workout));
         req.user.currentWorkout = workout;
 
-        if (workout == "ab" || workout == "abc") {
+        if (workout == "ab" || workout == "abc" || workout == "aerobic_ab_switch") {
             req.user.currentDay = "a";
+        }
+        else if (workout == "aerobic_ab") {
+            req.user.currentDay = "aerobic";
         }
 
         req.user.save();

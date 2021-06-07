@@ -20,29 +20,33 @@
 
         <div class="workout">
             <div class="name">
-                <h2>chest</h2>
+                <h2><%= firstExcersize.day %> - <%= Object.keys(excersizes)[index] %></h2>
             </div>
 
             <div class="excersize">
-                <h2><%= excersizes.chest[0].name %></h2>
+                <h2><%= excersizes[Object.keys(excersizes)[index]][0].name %></h2>
 
                 <div class="video">
                     <img id="left-arrow" src="/img/arrow_left.png" alt="">
                     <div class="view">
-                        <iframe src="https://www.youtube.com/embed/fnDM2jJ2yeI" width="600" height="315" frameborder="0"></iframe>
+                        <iframe src="<%= firstExcersize.url %>" width="600" height="315" frameborder="0"></iframe>
                     </div>
 
                     <img id="right-arrow" src="/img/arrow_right.png" alt="">
                 </div>
                 
                 <ul class="info">
-                    <li><%= excersizes.chest[0].sets %> sets</li>
-                    <li><%= excersizes.chest[0].kg %> kg</li>
-                    <li><%= excersizes.chest[0].reps %> reps</li>
+                    <li><%= firstExcersize.sets %> sets</li>
+                    <li><%= firstExcersize.kg %> kg</li>
+                    <li><%= firstExcersize.reps %> reps</li>
                 </ul>
             </div>
 
-            <form action="/workouts" method="POST" style="display: none">
+            <form id="done" action="/workouts/done" method="POST" style="display: none;">
+                <button type="submit">סיים אימון אירובי</button>
+            </form>
+
+            <form id="feedback" action="/workouts" method="POST" style="display: none">
                 <h2>דרג את קושי האימון</h2>
             
                 <button type="submit" name="-2">קשה מדי</button>

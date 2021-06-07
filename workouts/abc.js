@@ -36,7 +36,7 @@ const abc = {
             sets: 3,
             reps: 10,
             kg: 12,
-            url: 'https://www.youtube.com/embed/HyqTb_jE_oI&t=29',
+            url: 'https://www.youtube.com/embed/HyqTb_jE_oI?start=29',
             day: 'A'
         },
 
@@ -45,7 +45,7 @@ const abc = {
             sets: 3,
             reps: 8,
             kg: 20,
-            url: 'https://www.youtube.com/embed/8fm_4LWtgVM&t=30',
+            url: 'https://www.youtube.com/embed/8fm_4LWtgVM?start=30',
             day: 'A'
         },
 
@@ -53,7 +53,7 @@ const abc = {
             name: 'מקבילים באחיזה צרה',
             sets: 3,
             reps: "max",
-            url: 'https://www.youtube.com/embed/4la6BkUBLgo&t=1',
+            url: 'https://www.youtube.com/embed/4la6BkUBLgo?start=1',
             day: 'A'
         }
     ],
@@ -91,7 +91,7 @@ const abc = {
             sets: 3,
             reps: 10,
             kg: 34,
-            url: 'https://www.youtube.com/embed/pix9e8-SIpM&t=35',
+            url: 'https://www.youtube.com/embed/pix9e8-SIpM?start=35',
             day: 'B'
         },
 
@@ -117,7 +117,7 @@ const abc = {
             name: 'מתח באחיזה רחבה',
             sets: 3,
             reps: "max",
-            url: 'https://www.youtube.com/embed/WXMKjV11lAk&t=19',
+            url: 'https://www.youtube.com/embed/WXMKjV11lAk?start=19',
             day: 'B'
         }
     ],
@@ -137,7 +137,7 @@ const abc = {
             sets: 3,
             reps: 8,
             kg: 8,
-            url: 'https://www.youtube.com/embed/b7phYAO4EJY&t=29',
+            url: 'https://www.youtube.com/embed/b7phYAO4EJY?start=29',
             day: 'B'
         }
     ],
@@ -147,7 +147,7 @@ const abc = {
             name: 'פשיטת גב על כיסא ייעודי',
             sets: 3,
             reps: 10,
-            url: 'https://www.youtube.com/embed/qtjJUWCnDyE&t=47',
+            url: 'https://www.youtube.com/embed/qtjJUWCnDyE?start=47',
             day: 'B',
             last: true
         }
@@ -159,7 +159,7 @@ const abc = {
             sets: 4,
             reps: "כמות חזרות יורדת בהדרגה: 6-8-10-12",
             kg: 8,
-            url: 'https://www.youtube.com/embed/g9xe7PPON6c&t=24',
+            url: 'https://www.youtube.com/embed/g9xe7PPON6c?start=24',
             day: 'C'
         },
 
@@ -177,7 +177,7 @@ const abc = {
             sets: 3,
             reps: 14,
             kg: 20,
-            url: 'https://www.youtube.com/embed/yR_LqZYSIgM&t=16',
+            url: 'https://www.youtube.com/embed/yR_LqZYSIgM?start=16',
             day: 'C'
         },
 
@@ -186,7 +186,7 @@ const abc = {
             sets: 3,
             reps: 14,
             kg: 20,
-            url: 'https://www.youtube.com/embed/jxctD6fL_FQ&t=1',
+            url: 'https://www.youtube.com/embed/jxctD6fL_FQ?start=1',
             day: 'C'
         }
     ],
@@ -215,7 +215,7 @@ const abc = {
             sets: 3,
             reps: 10,
             kg: 8,
-            url: 'https://www.youtube.com/embed/SCkitqdcPiM&t=38',
+            url: 'https://www.youtube.com/embed/SCkitqdcPiM?start=38',
             day: 'C',
             last: true
         }

@@ -24,7 +24,7 @@ const updateWorkout = (name, excersizeName, t_info) => {
     view.html('');
     
     // updating content
-    if (excersizes.name == "ab" || excersizes.name == "abc") {
+    if (excersizes.name != "fbw" && excersizes.name != "aerobic") {
         workoutName.text(`${excersizes[currentExcersize][counter].day} - ${name}`);
     } else {
         workoutName.text(`${name}`);
@@ -40,7 +40,11 @@ const updateWorkout = (name, excersizeName, t_info) => {
 
         switch (true) {
             case type =="duration":
-                info.append(`<li>${value} minutes</li>`);
+                if (value !== "דקה") {
+                    info.append(`<li>${value} minutes</li>`);
+                } else {
+                    info.append(`<li>${value}</li>`)
+                }
                 break;
 
             case type == "speed":
@@ -66,7 +70,12 @@ const updateWorkout = (name, excersizeName, t_info) => {
     if (excersizes[currentExcersize][counter].last && currentExcersize != finalExcersize) {
         doneForm.css('display', 'block');
         $('.workout').css('padding-bottom', '0');
-        $('#done button').html(`${excersizes[currentExcersize][counter].day} סיים אימון`);
+        
+        if (excersizes[currentExcersize][counter].day == "אירובי") {
+            $('#done button').html(`סיים אימון אירובי`);
+        } else {
+            $('#done button').html(`${excersizes[currentExcersize][counter].day} סיים אימון`);
+        }
 
         rightArrow.css('visibility', 'hidden');
     } else {

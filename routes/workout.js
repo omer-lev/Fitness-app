@@ -60,6 +60,7 @@ router.post('/', isLoggedIn, (req, res) => {
 
 router.post('/done', isLoggedIn, (req, res) => {
     updateWorkoutDay(req);
+    console.log(req.user.currentDay);
 
     req.user.save();
     res.redirect('/');
@@ -68,6 +69,9 @@ router.post('/done', isLoggedIn, (req, res) => {
 router.get('/:id', isLoggedIn, (req, res) => {
     const workout = req.params.id;
     let t_index = 1;
+
+    req.user.currentWorkout = workout;
+    req.user.save();
 
     const selectionPages = [
         'fbw_or_abc', 
@@ -101,17 +105,52 @@ router.get('/:id', isLoggedIn, (req, res) => {
                 switch (req.user.currentDay) {
                     case "a":
                         t_index = 1;
-                        console.log("A day");
                         break;
                 
                     case "b":
                         t_index = 4;
-                        console.log("B day");
                         break;
 
                     case "c":
                         t_index = 7;
-                        console.log("C day");
+                        break;
+                
+                    default:
+                        break;
+                }
+                break;
+
+            case "aerobic_ab_switch":
+                switch (req.user.currentDay) {
+                    case "a":
+                        t_index = 1;
+                        break;
+                
+                    case "aerobic":
+                        t_index = 4;
+                        break;
+
+                    case "b":
+                        t_index = 6;
+                        break;
+                
+                    default:
+                        break;
+                }
+                break;
+
+            case "aerobic_ab":
+                switch (req.user.currentDay) {
+                    case "aerobic":
+                        t_index = 1;
+                        break;
+                
+                    case "a":
+                        t_index = 3;
+                        break;
+
+                    case "b":
+                        t_index = 6;
                         break;
                 
                     default:
@@ -144,21 +183,59 @@ router.post('/selection', (req, res) => {
 
 
 const updateWorkoutDay = (req) => {
-    switch (req.user.currentDay) {
-        case "a":
-            req.user.currentDay = "b"
-            break;
-    
-        case "b":
-            req.user.currentDay = "c"
-            break;
-    
-        case "c":
-            req.user.currentDay = "a"
-            break;
-    
-        default:
-            break;
+    if (req.user.currentWorkout == "aerobic_ab_switch") {
+        switch (req.user.currentDay) {
+            case "a":
+                req.user.currentDay = "aerobic"
+                break;
+        
+            case "aerobic":
+                req.user.currentDay = "b"
+                break;
+        
+            case "b":
+                req.user.currentDay = "a"
+                break;
+        
+            default:
+                break;
+        }
+    } 
+    else if (req.user.currentWorkout == "aerobic_ab") {
+        switch (req.user.currentDay) {
+            case "aerobic":
+                req.user.currentDay = "a"
+                break;
+        
+            case "a":
+                req.user.currentDay = "b"
+                break;
+        
+            case "b":
+                req.user.currentDay = "aerobic"
+                break;
+        
+            default:
+                break;
+        }
+    }
+    else {
+        switch (req.user.currentDay) {
+            case "a":
+                req.user.currentDay = "b"
+                break;
+        
+            case "b":
+                req.user.currentDay = "c"
+                break;
+        
+            case "c":
+                req.user.currentDay = "a"
+                break;
+        
+            default:
+                break;
+        }
     }
 }
 

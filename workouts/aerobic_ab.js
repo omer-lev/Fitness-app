@@ -1,5 +1,58 @@
+const aerobic = require("./aerobic")
+
 const aerobic_ab = {
     name: "aerobic_ab",
+
+    trademill: [
+        {
+            name: 'ריצה',
+            duration: 40,
+            speed: 7,
+            url: 'https://www.youtube.com/embed/B2exKGkFp50',
+            day: 'אירובי'
+        },
+
+        {
+            name: 'אופניים במכונה',
+            duration: 20,
+            url: 'https://www.youtube.com/embed/0bbsSmqLtXk',
+            day: 'אירובי'
+        },
+
+        {
+            name: 'מדרגות במכונה',
+            duration: 20,
+            url: 'https://www.youtube.com/embed/Ay0rlthn5aM',
+            day: 'אירובי'
+        },
+    ],
+
+    abs: [
+        {
+            name: 'כפיפות בטן',
+            sets: 3,
+            reps: 15,
+            url: 'https://www.youtube.com/embed/MKmrqcoCZ-M',
+            day: 'אירובי'
+        },
+
+        {
+            name: 'בטן פנגווין',
+            sets: 3,
+            reps: 20,
+            url: 'https://www.youtube.com/embed/mKilN1fjiso',
+            day: 'אירובי'
+        },
+
+        {
+            name: 'פלנק / בטן סטטית',
+            duration: "דקה",
+            sets: 2,
+            url: 'https://www.youtube.com/embed/k1x811LYuJA',
+            day: 'אירובי',
+            last: true
+        }
+    ],
     
     chest: [
         {
@@ -7,7 +60,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/embed/fnDM2jJ2yeI'
+            url: 'https://www.youtube.com/embed/fnDM2jJ2yeI',
+            day: 'A'
         },
 
         {
@@ -15,7 +69,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/embed/QwuUZ5wgQOk'
+            url: 'https://www.youtube.com/embed/QwuUZ5wgQOk',
+            day: 'A'
         },
 
         {
@@ -23,7 +78,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 18,
-            url: 'https://www.youtube.com/embed/hTtrux70vGs'
+            url: 'https://www.youtube.com/embed/hTtrux70vGs',
+            day: 'A'
         }
     ],
 
@@ -33,14 +89,16 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 15,
-            url: 'https://www.youtube.com/embed/8fm_4LWtgVM?start=30'
+            url: 'https://www.youtube.com/embed/8fm_4LWtgVM?start=30',
+            day: 'A'
         },
 
         {
             name: 'מקבילים באחיזה צרה',
             sets: 3,
             reps: "max",
-            url: 'https://www.youtube.com/embed/4la6BkUBLgo?start=1'
+            url: 'https://www.youtube.com/embed/4la6BkUBLgo?start=1',
+            day: 'A'
         }
     ],
 
@@ -50,7 +108,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/embed/pix9e8-SIpM?start=35'
+            url: 'https://www.youtube.com/embed/pix9e8-SIpM?start=35',
+            day: 'A'
         },
 
         {
@@ -58,7 +117,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/embed/lueEJGjTuPQ'
+            url: 'https://www.youtube.com/embed/lueEJGjTuPQ',
+            day: 'A'
         },
 
         {
@@ -66,14 +126,17 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/embed/hYSo7veljQs'
+            url: 'https://www.youtube.com/embed/hYSo7veljQs',
+            day: 'A'
         },
 
         {
             name: 'מתח באחיזה רחבה',
             sets: 2,
             reps: "max",
-            url: 'https://www.youtube.com/embed/WXMKjV11lAk?start=19'
+            url: 'https://www.youtube.com/embed/WXMKjV11lAk?start=19',
+            day: 'A',
+            last: true
         }
     ],
 
@@ -83,7 +146,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 10,
-            url: 'https://www.youtube.com/embed/kwG2ipFRgfo'
+            url: 'https://www.youtube.com/embed/kwG2ipFRgfo',
+            day: 'B'
         },
 
         {
@@ -91,7 +155,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 8,
-            url: 'https://www.youtube.com/embed/b7phYAO4EJY?start=29'
+            url: 'https://www.youtube.com/embed/b7phYAO4EJY?start=29',
+            day: 'B'
         }
     ],
 
@@ -100,7 +165,8 @@ const aerobic_ab = {
             name: 'פשיטת גב על כיסא ייעודי',
             sets: 3,
             reps: 12,
-            url: 'https://www.youtube.com/embed/qtjJUWCnDyE'
+            url: 'https://www.youtube.com/embed/qtjJUWCnDyE',
+            day: 'B'
         }
     ],
 
@@ -110,7 +176,8 @@ const aerobic_ab = {
             sets: 4,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/embed/g9xe7PPON6c?start=24'
+            url: 'https://www.youtube.com/embed/g9xe7PPON6c?start=24',
+            day: 'B'
         },
 
         {
@@ -118,7 +185,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 30,
-            url: 'https://www.youtube.com/embed/Xn7yJcrA7QM'
+            url: 'https://www.youtube.com/embed/Xn7yJcrA7QM',
+            day: 'B'
         },
 
         {
@@ -126,7 +194,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/embed/yR_LqZYSIgM?start=16'
+            url: 'https://www.youtube.com/embed/yR_LqZYSIgM?start=16',
+            day: 'B'
         },
 
         {
@@ -134,7 +203,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 14,
             kg: 15,
-            url: 'https://www.youtube.com/embed/jxctD6fL_FQ?start=1'
+            url: 'https://www.youtube.com/embed/jxctD6fL_FQ?start=1',
+            day: 'B'
         }
     ],
 
@@ -144,7 +214,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 3.5,
-            url: 'https://www.youtube.com/embed/sxeY7kMYhLc'
+            url: 'https://www.youtube.com/embed/sxeY7kMYhLc',
+            day: 'B'
         },
 
         {
@@ -152,7 +223,8 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/embed/0JfYxMRsUCQ'
+            url: 'https://www.youtube.com/embed/0JfYxMRsUCQ',
+            day: 'B'
         },
 
         {
@@ -160,51 +232,11 @@ const aerobic_ab = {
             sets: 3,
             reps: 12,
             kg: 6,
-            url: 'https://www.youtube.com/embed/SCkitqdcPiM?start=38'
-        }
-    ],
-
-    trademill: [
-        {
-            name: 'ריצה',
-            duration: 40,
-            speed: 7,
-            url: 'https://www.youtube.com/embed/B2exKGkFp50'
-        },
-
-        {
-            name: 'אופניים במכונה',
-            duration: 20,
-            url: 'https://www.youtube.com/embed/0bbsSmqLtXk'
-        },
-
-        {
-            name: 'מדרגות במכונה',
-            duration: 20,
-            url: 'https://www.youtube.com/embed/Ay0rlthn5aM'
-        },
-    ],
-
-    abs: [
-        {
-            name: 'כפיפות בטן',
-            sets: 3,
-            reps: 15,
-            url: 'https://www.youtube.com/embed/MKmrqcoCZ-M'
-        },
-
-        {
-            name: 'בטן פנגווין',
-            sets: 3,
-            reps: 20,
-            url: 'https://www.youtube.com/embed/mKilN1fjiso'
-        },
-
-        {
-            name: 'פלנק / בטן סטטית',
-            duration: "דקה",
-            sets: 2,
-            url: 'https://www.youtube.com/embed/k1x811LYuJA'
+            url: 'https://www.youtube.com/embed/SCkitqdcPiM?start=38',
+            day: 'B',
+            last: true
         }
     ]
 }
+
+module.exports = aerobic_ab;

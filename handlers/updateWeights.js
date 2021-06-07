@@ -10,6 +10,12 @@ const updateWeights = (diff, workouts, currentWorkout) => {
 
             if (excersize.hasOwnProperty('kg')) {
                 excersize.kg += diff;
+            } 
+            
+            else if (excersize.hasOwnProperty('reps') && !excersize.hasOwnProperty('kg')) {
+                if (excersize.reps !== "max") {
+                    excersize.reps += diff;
+                }
             }
         }
     }
