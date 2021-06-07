@@ -18,6 +18,14 @@ let currentExcersize = Object.keys(excersizes)[excersizeIndex];
 let finalExcersize = Object.keys(excersizes)[Object.keys(excersizes).length - 1];
 let finalExcersizeIndex = excersizes[finalExcersize].length - 1;
 
+let initialInfo = {
+    kg: excersizes[currentExcersize][counter].kg,
+    sets: excersizes[currentExcersize][counter].sets,
+    reps: excersizes[currentExcersize][counter].reps,
+    duration: excersizes[currentExcersize][counter].duration,
+    speed: excersizes[currentExcersize][counter].speed
+}
+
 
 const updateWorkout = (name, excersizeName, t_info) => {
     info.html('');
@@ -95,6 +103,13 @@ const setInfo = (allInfo) => {
     return updatedInfo;
 }
 
+// initialize page info
+initialInfo = setInfo(initialInfo);
+updateWorkout(
+    currentExcersize,
+    excersizes[currentExcersize][0].name,
+    initialInfo
+)
 
 if (excersizeIndex == index && counter == 0) {
     leftArrow.css('visibility', 'hidden');
