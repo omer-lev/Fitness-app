@@ -15,3 +15,18 @@
     background-color: rgb(217, 226, 238);
     padding: .7vw 1vw;
 }
+
+.main-title {
+    display: inline-block;
+}
+
+.text h1 {
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+    padding: 0 0 10px 0;
+    margin-bottom: 2vh;
+}
+
+.text p {
+    font-size: 18px;
+}
