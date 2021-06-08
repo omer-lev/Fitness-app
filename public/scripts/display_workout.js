@@ -103,6 +103,24 @@ const setInfo = (allInfo) => {
     return updatedInfo;
 }
 
+const updateInfo = () => {
+    const allInfo = {
+        kg: excersizes[currentExcersize][counter].kg,
+        sets: excersizes[currentExcersize][counter].sets,
+        reps: excersizes[currentExcersize][counter].reps,
+        duration: excersizes[currentExcersize][counter].duration,
+        speed: excersizes[currentExcersize][counter].speed
+    };
+
+    const updatedInfo = setInfo(allInfo);
+
+    updateWorkout(
+        currentExcersize,
+        excersizes[currentExcersize][counter].name,
+        updatedInfo
+    );
+}
+
 // initialize page info
 initialInfo = setInfo(initialInfo);
 updateWorkout(
@@ -119,41 +137,13 @@ rightArrow.on('click', () => {
     if (counter + 1 < excersizes[currentExcersize].length) {
         counter++;
 
-        const allInfo = {
-            kg: excersizes[currentExcersize][counter].kg,
-            sets: excersizes[currentExcersize][counter].sets,
-            reps: excersizes[currentExcersize][counter].reps,
-            duration: excersizes[currentExcersize][counter].duration,
-            speed: excersizes[currentExcersize][counter].speed
-        };
-
-        const updatedInfo = setInfo(allInfo);
-
-        updateWorkout(
-            currentExcersize,
-            excersizes[currentExcersize][counter].name,
-            updatedInfo
-        );
+        updateInfo();
     } else {
         counter = 0;
         excersizeIndex++;
         currentExcersize = Object.keys(excersizes)[excersizeIndex];
 
-        const allInfo = {
-            kg: excersizes[currentExcersize][counter].kg,
-            sets: excersizes[currentExcersize][counter].sets,
-            reps: excersizes[currentExcersize][counter].reps,
-            duration: excersizes[currentExcersize][counter].duration,
-            speed: excersizes[currentExcersize][counter].speed
-        };
-
-        const updatedInfo = setInfo(allInfo);
-
-        updateWorkout(
-            currentExcersize, 
-            excersizes[currentExcersize][counter].name,
-            updatedInfo
-        );
+        updateInfo();
     }
 
     if (currentExcersize == finalExcersize && counter == finalExcersizeIndex) {
@@ -168,41 +158,13 @@ leftArrow.on('click', () => {
     if (counter - 1 != -1) {
         counter--;
 
-        const allInfo = {
-            kg: excersizes[currentExcersize][counter].kg,
-            sets: excersizes[currentExcersize][counter].sets,
-            reps: excersizes[currentExcersize][counter].reps,
-            duration: excersizes[currentExcersize][counter].duration,
-            speed: excersizes[currentExcersize][counter].speed
-        };
-
-        const updatedInfo = setInfo(allInfo);
-
-        updateWorkout(
-            currentExcersize, 
-            excersizes[currentExcersize][counter].name,
-            updatedInfo
-        );
+        updateInfo();
     } else {
         excersizeIndex--;
         currentExcersize = Object.keys(excersizes)[excersizeIndex];
         counter = excersizes[currentExcersize].length - 1;
 
-        const allInfo = {
-            kg: excersizes[currentExcersize][counter].kg,
-            sets: excersizes[currentExcersize][counter].sets,
-            reps: excersizes[currentExcersize][counter].reps,
-            duration: excersizes[currentExcersize][counter].duration,
-            speed: excersizes[currentExcersize][counter].speed
-        };
-
-        const updatedInfo = setInfo(allInfo);
-
-        updateWorkout(
-            currentExcersize, 
-            excersizes[currentExcersize][counter].name,
-            updatedInfo
-        );
+        updateInfo();
     }
 
     if (excersizeIndex == 1 && counter == 0) {
