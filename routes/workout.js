@@ -60,7 +60,6 @@ router.post('/', isLoggedIn, (req, res) => {
 
 router.post('/done', isLoggedIn, (req, res) => {
     updateWorkoutDay(req);
-    console.log(req.user.currentDay);
 
     req.user.save();
     res.redirect('/');
