@@ -82,8 +82,6 @@ router.get('/:id', isLoggedIn, (req, res) => {
     if (selectionPages.indexOf(workout) != -1) {
         res.render('workoutSelection', { selection: req.params.id });
     } else {
-        switchExcersizes(req, workout);
-
         switch (workout) {
             case "ab":
                 switch (req.user.currentDay) {
@@ -160,6 +158,9 @@ router.get('/:id', isLoggedIn, (req, res) => {
             default:
                 break;
         }
+
+        switchExcersizes(req, workout);
+
 
         for (let i = 0; i < req.user.workouts.length; i++) {
             if (JSON.stringify(req.user.workouts[i].name) == JSON.stringify(workout)) {
