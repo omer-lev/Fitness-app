@@ -25,7 +25,7 @@ router.post('/register', async (req, res) => {
                 req.flash('error', 'failed to automatically login after registration, please login manually');
                 res.redirect('/login');
             } else {
-                const redirectUrl = req.session.returnTo || '/login';
+                const redirectUrl = req.session.returnTo || '/user_define';
                 delete req.session.returnTo;
 
                 req.flash('success', 'Welcome to Fitness App!');
