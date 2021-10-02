@@ -24,7 +24,7 @@ let initialInfo = {
     reps: excersizes[currentExcersize][counter].reps,
     duration: excersizes[currentExcersize][counter].duration,
     speed: excersizes[currentExcersize][counter].speed
-}
+};
 
 
 const updateWorkout = (name, excersizeName, t_info) => {

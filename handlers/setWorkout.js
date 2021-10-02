@@ -23,7 +23,7 @@ const setWorkout = (BMI, schedule) => {
                     return 'fbw_or_abc';
                     break;
             }
-
+        
         case BMI > 25 && BMI <= 30:
             switch(schedule) {
                 case 1:
@@ -38,7 +38,7 @@ const setWorkout = (BMI, schedule) => {
                     return 'fbw_or_ab';
                     break;
             }
-
+        
         case BMI > 30 && BMI <= 35:
             switch(schedule) {
                 case 1:

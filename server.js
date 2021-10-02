@@ -26,9 +26,9 @@ const connectionOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
-}
+};
 
-mongoose.connect(process.env.MONGO_URI, connectionOptions)
+mongoose.connect(process.env.MONGO_URI, connectionOptions);
 
 const sessionConfig = {
     secret: 'test',
@@ -63,7 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 // Use routes
 app.get('/', (req, res) => {
     res.render('home');
-})
+});
 
 app.use('/', authRoutes);
 
@@ -74,4 +74,4 @@ app.use('/workouts', workoutRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`.cyan);
-})
+});
