@@ -23,6 +23,11 @@
         <a href="/user_define">Start working out</a>
     </div>
 
-    <%- include('partials/serviceWorker.ejs') %>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('scripts/service-worker.js');
+        }
+    </script>
 </body>
 </html>
