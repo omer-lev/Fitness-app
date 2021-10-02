@@ -47,11 +47,6 @@ router.post('/', isLoggedIn, (req, res) => {
             res.redirect('/user_define');
         } else {
             const workoutName = setWorkout(user.BMI, user.schedule);
-
-            if (selectionPages.indexOf(setWorkout(user.BMI, user.schedule)) == -1) {
-                user.workouts = eval(workoutName);
-                user.save();
-            }
             
             res.redirect(`/workouts/${workoutName}`);
         }
