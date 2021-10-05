@@ -1,3 +1,6 @@
+const popUp = $('.install-app');
+const closePopUp = $('.install-app .fa-times');
+const installAppBtn = $('.install-app button');
 let defferedPrompt;
 
 if ('serviceWorker' in navigator) {
