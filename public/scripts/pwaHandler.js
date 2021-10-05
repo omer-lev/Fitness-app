@@ -34,3 +34,7 @@ window.addEventListener('appinstalled', (e) => {
     console.log(`--> APP INSTALLED: ${e}`);
     defferedPrompt = null;
 });
+
+closePopUp.on('click', () => {
+    popUp.css('display', 'none');
+});
