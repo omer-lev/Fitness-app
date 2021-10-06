@@ -19,5 +19,5 @@
     "theme_color": "#4996da",
     "background_color": "#4996da",
     "display": "fullscreen",
-    "orientation": "natural"
+    "orientation": "portrait"
 }
