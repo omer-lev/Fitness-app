@@ -13,7 +13,6 @@ const switchExcersizes = (req, workout) => {
 
     for (let i = 0; i < req.user.workouts.length; i++) {
         if (JSON.stringify(req.user.workouts[i].name) == JSON.stringify(workout)) {
-            console.log("found", workout);
             found = true;
         }
     }
@@ -21,8 +20,6 @@ const switchExcersizes = (req, workout) => {
     if (found === false) {
         req.user.workouts.push(eval(workout));
         req.user.currentWorkout = workout;
-
-        console.log("didn't find", workout);
 
         if (workout == "ab" || workout == "abc" || workout == "aerobic_ab_switch") {
             req.user.currentDay = "a";

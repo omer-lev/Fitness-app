@@ -1,18 +1,15 @@
-.container {
-    width: 100%;
-    text-align: center;
-}
-
 .form {
-    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
     margin-top: 10vh;
+    text-align: center;
     background-color: #4996da;
-    padding: 4vh 7vw 8vh 7vw;
+    padding: 2vh 0 6vh 0;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.315);
 }
 
 .form h1 {
-    margin-bottom: 2vh;
+    margin-bottom: 2.5vh;
     color: white;
     font-weight: 400;
 }
@@ -20,7 +17,7 @@
 .form input {
     border: none;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.315);
-    width: 20vw;
+    width: 40%;
     padding: .8vh 0 .8vh .3vw;
     border-bottom: 1px solid rgba(0, 0, 0, 0.315);
 }
@@ -28,9 +25,43 @@
 .form button {
     padding: 1.2vh 0;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.315);
-    width: 100%;
+    width: 40%;
     cursor: pointer;
     border: none;
     background-color: #003F75;
     color: white;
+}
+
+@media (max-width: 1350px) {
+    .form input {
+        width: 70%;
+    }
+
+    .form button {
+        width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+    .form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 450px) {
+    .form {
+        width: 85%;
+    }
+
+    .form h1 {
+        font-size: 26px;
+    }
+
+    .form input {
+        width: 85%;
+    }
+
+    .form button {
+        width: 85%;
+    }
 }

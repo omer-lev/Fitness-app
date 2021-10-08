@@ -6,7 +6,7 @@
 
 .workout {
     display: inline-block;
-    width: 50vw;
+    width: 60%;
     background-color: #4996da;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.315);
     padding-bottom: 4vh;
@@ -53,6 +53,7 @@
 
 .video img {
     cursor: pointer;
+    width: 28px;
 }
 
 form {
@@ -67,7 +68,7 @@ form h2 {
 }
 
 #feedback button {
-    width: 6vw;
+    width: 30%;
     height: 3.5vh;
     cursor: pointer;
     border: none;
@@ -78,7 +79,7 @@ form h2 {
 }
 
 #done button {
-    width: 9vw;
+    width: 35%;
     height: 6.5vh;
     cursor: pointer;
     border: none;
@@ -88,17 +89,39 @@ form h2 {
     background-color: #003F75;
 }
 
+.view {
+    width: 60%;
+}
+
 .view iframe {
     width: 30vw;
     height: 30vh;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .workout {
-        width: 70vw;
+        width: 80%;
+    }
+
+    .view {
+        width: 80%;
     }
 
     .view iframe {
-        width: 40vw;
+        width: 80%;
+    }
+}
+
+@media (max-width: 850px) {
+    .workout {
+        width: 90%;
+    }
+
+    .view iframe {
+        width: 100%;
+    }
+
+    .video img {
+        width: 5%;
     }
 }

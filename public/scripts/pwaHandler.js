@@ -11,9 +11,10 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     defferedPrompt = e;
 
-    popUp.css('display', 'flex');
-
-    console.log(`--> DEFFERED PROMPT: ${defferedPrompt}`);
+    // if mobile device
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        popUp.css('display', 'flex');
+    }
 });
 
 installAppBtn.on('click', async () => {
@@ -23,10 +24,8 @@ installAppBtn.on('click', async () => {
     defferedPrompt.prompt();
 
     const result = await defferedPrompt.userChoice;
-    console.log(`--> USER CHOICE: ${result}`);
 
     defferedPrompt = null;
-
     popUp.css('display', 'none');
 });
 

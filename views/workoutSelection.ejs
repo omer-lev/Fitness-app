@@ -15,9 +15,9 @@
 
     <div class="container">
         <div class="form">
-            <h1>Please select one of the following workouts</h1>
-
             <form action="/workouts/selection" method="POST">
+                <h1>Please select one of the following workouts</h1>
+
                 <% switch(selection) {
                     case 'fbw_or_abc': %>
                         <button name="fbw">Full body workout</button>

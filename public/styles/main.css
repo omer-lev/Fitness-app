@@ -28,26 +28,40 @@ a, a:hover, a:focus, a:active {
 
 .success-alert {
     position: absolute;
-    top: 15%;
+    top: 145px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(1, 255, 1, 0.418);
     text-align: center;
     border-radius: 5px;
-    padding: 8px 10px;
+    padding: 5px 5px;
     cursor: pointer;
     z-index: 100;
 }
 
 .error-alert {
     position: absolute;
-    top: 15%;
+    top: 145px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 1, 1, 0.418);
     text-align: center;
+    padding: 5px 5px;
     border-radius: 5px;
-    padding: 8px 10px;
     cursor: pointer;
     z-index: 100;
+}
+
+@media (max-width: 460px) {
+    .error-alert {
+        top: 132px;
+        width: 65%;
+        font-size: 14px;
+    }
+
+    .success-alert {
+        top: 132px;
+        width: 65%;
+        font-size: 14px;
+    }
 }
