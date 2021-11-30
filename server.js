@@ -12,6 +12,7 @@ const flash = require('connect-flash');
 
 // Routes
 const authRoutes = require('./routes/auth');
+const profileRoutes = require('./routes/profile');
 const userDefineRoutes = require('./routes/userDefine');
 const workoutRoutes = require('./routes/workout');
 
@@ -28,7 +29,7 @@ const connectionOptions = {
     useUnifiedTopology: true
 };
 
-mongoose.connect(process.env.MONGO_URI, connectionOptions);
+// mongoose.connect(process.env.MONGO_URI, connectionOptions);
 
 const sessionConfig = {
     secret: 'test',
@@ -66,6 +67,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/', authRoutes);
+
+app.use('/profile', profileRoutes);
 
 app.use('/user_define', userDefineRoutes);
 

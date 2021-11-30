@@ -20,6 +20,15 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #437da8 !important;
+}
+
 .alert-container {
     display: flex;
     justify-content: center;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Fitness App</title>
+
+    <link rel="stylesheet" href="/styles/profile.css">
+
+    <%- include('partials/includes.ejs') %>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="profile">
+        <div class="profile-card">
+            <img src="/img/guest.png" alt="" />
+    
+            <div class="section">
+                <div class="field">
+                    <label htmlFor="">username:</label>
+                    <input type="text" value="omer" id="valid" disabled />
+                </div>
+    
+                <div class="field">
+                    <label htmlFor="">email:</label>
+                    <input type="text" value="omerlev66@gmail.com" id="valid" disabled />
+                </div>
+            </div>
+    
+            <button onclick="window.location.href = '/'">BACK</button>
+            <button>UPDATE PROFILE</button>
+        </div>
+    </div>
+</body>
+</html>
