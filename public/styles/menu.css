@@ -1,0 +1,40 @@
+.menu {
+    width: 60%;
+    margin: 2rem auto 0 auto;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: rgba(248, 246, 246, 0.863);
+}
+
+.menu .title {
+    padding: .5rem 0;
+    color: whitesmoke;
+    font-weight: 500;
+    background-color: #236ca3;
+}
+
+.menu .title button {
+    width: 5rem;
+}
+
+.menu .meal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.menu .meal h3 {
+    margin-bottom: .5rem;
+    border-bottom: 1px solid black;
+}
+
+.menu .meal img {
+    width: 2rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.menu .meal #left-arrow {
+    visibility: hidden;
+}
