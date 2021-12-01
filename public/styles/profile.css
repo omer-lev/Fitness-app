@@ -5,8 +5,8 @@
 .profile .profile-card {
     width: 65%;
     display: inline-block;
-    margin-top: 5rem;
-    padding: 0 3.5rem;
+    margin: 2rem 0;
+    padding: 2rem 3.5rem;
     text-align: center;
     box-shadow: 1px 1px 10px #000000;
     color: whitesmoke;
@@ -16,24 +16,26 @@
 .profile .profile-card img {
     width: 12rem;
     height: 12rem;
-    margin: 3rem 0 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.profile .profile-card .section-container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: .3rem solid #236ca3;
+    background-color: rgba(0, 0, 0, 0.363);
 }
 
 .profile .profile-card .section {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    margin: 0 auto;
 }
 
 .profile .profile-card .section .field {
-    display: flex;
-    align-items: center;
     width: 50%;
-    margin: .5rem 0;
-    padding: 5px 1rem;
-    border-left: .4rem solid #236ca3;
-    border-radius: 2px;
-    background-color: rgba(0, 0, 0, 0.363);
+    text-align: left;
+    padding: .7rem 1rem;
 }
 
 .profile .profile-card .section .field input {
@@ -45,12 +47,30 @@
     outline: none;
 }
 
+.profile .profile-card .section#button-section .field {
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
 .profile .profile-card button {
-    margin: 2rem 1rem;
     width: 10rem;
     height: 2.5rem;
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     background-color: #236ca3;
+}
+
+.profile .profile-card .section#back button {
+    width: 80%;
+    height: 2.5rem;
+    margin: 0 auto;
+    font-weight: 600;
+    color: #236ca3;
+    background-color: rgba(248, 246, 246, 0.863);
+}
+
+.profile .profile-card .section#back button:hover {
+    /* color: whitesmoke; */
+    background-color: rgba(248, 246, 246, 0.671) !important;
 }
