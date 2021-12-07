@@ -22,6 +22,7 @@ const updateWeights = require('./handlers/updateWeights');
 
 require('dotenv').config();
 
+
 // Database connection
 const connectionOptions = {
     useNewUrlParser: true,
@@ -29,7 +30,7 @@ const connectionOptions = {
     useUnifiedTopology: true
 };
 
-// mongoose.connect(process.env.MONGO_URI, connectionOptions);
+mongoose.connect(process.env.MONGO_URI, connectionOptions);
 
 const sessionConfig = {
     secret: 'test',
@@ -47,12 +48,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(flash());
 app.use(session(sessionConfig));
 
-app.use((req, res, next) => {
-    res.locals.success = req.flash('success');
-    res.locals.error = req.flash('error');
-    next();
-});
-
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new passportLocal({ usernameField: 'email' }, User.authenticate()));
@@ -60,6 +55,13 @@ passport.use(new passportLocal({ usernameField: 'email' }, User.authenticate()))
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use((req, res, next) => {
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    res.locals.user = req.user;
+
+    next();
+});
 
 // Use routes
 app.get('/', (req, res) => {
