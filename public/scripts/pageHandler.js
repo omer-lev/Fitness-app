@@ -1,6 +1,6 @@
 const logo = $('.nav .logo img');
-const menu = $('.fa-bars');
-const times = $('.drop-down .fa-times');
+const menuElement = $('.fa-bars');
+const timesElement = $('.drop-down .fa-times');
 const mobileNav = $('.mobile-nav');
 
 
@@ -8,14 +8,14 @@ logo.on('click', () => {
     window.location.href = '/';
 });
 
-menu.on('click', () => {
-    menu.toggle();
+menuElement.on('click', () => {
+    menuElement.toggle();
     mobileNav.toggle();
-    times.toggle();
+    timesElement.toggle();
 });
 
-times.on('click', () => {
-    menu.toggle();
+timesElement.on('click', () => {
+    menuElement.toggle();
     mobileNav.toggle();
-    times.toggle();
+    timesElement.toggle();
 });

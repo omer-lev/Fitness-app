@@ -12,7 +12,7 @@ router.get('/nutrition', (req, res) => {
     const BMI = 25;
     const menu = setMenu(BMI);
 
-    res.render('menu', { menu: menu });
+    res.render('nutrition', { menu: menu });
 });
 
 module.exports = router;

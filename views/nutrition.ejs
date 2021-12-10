@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Fitness App</title>
+
+    <link rel="stylesheet" href="/styles/nutrition.css">
+    <%- include('partials/includes.ejs') %>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="menu">
+        <div class="title">
+            <h2><%= menu.title %></h2>
+            
+            <button>ימי מנוחה</button>
+            <button>ימי אימון</button>
+        </div>
+
+        <div class="meal">
+            <img src="/img/arrow_left.png" id="left-arrow">
+
+            <div class="container">
+                <h3>ארוחה 1</h3>
+
+                <p>food</p>
+                <p>food</p>
+                <p>food</p>
+                <p>food</p>
+            </div>
+
+            <img src="/img/arrow_right.png" id="right-arrow">
+        </div>
+    </div>
+
+
+    <script>
+        let menus = "<%= menu %>";
+        
+        console.log(menus);
+
+        let workMenu = [
+            menus.work[0],
+            menus.work[1],
+            menus.work[2],
+            menus.work[3],
+            menus.work[4],
+            menus.work[5]
+        ];
+
+        let restMenu = [
+            menus.rest[0],
+            menus.rest[1],
+            menus.rest[2],
+            menus.rest[3],
+            menus.rest[4],
+            menus.rest[5]
+        ];
+    </script>
+
+    <script src="/scripts/nutrition.js"></script>
+</body>
+</html>

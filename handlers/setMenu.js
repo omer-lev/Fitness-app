@@ -1,22 +1,23 @@
+const menus = require('./menus');
+
 const setMenu = (BMI) => {
     switch (true) {
         case BMI < 25:
-            return "mass menu";
+            return menus.bulk;
 
             break;
 
         case BMI >= 25 && BMI <= 30:
-            return "maintenance menu";
+            return menus.maintenance;
 
             break;
 
         case BMI > 30:
-            return "cut menu";
+            return menus.cut;
 
             break;
     
         default:
-            return "default";
             break;
     }
 };
