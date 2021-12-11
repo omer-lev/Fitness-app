@@ -8,9 +8,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/nutrition', (req, res) => {
-    // const { BMI } = req.body;
-    const BMI = 25;
-    const menu = setMenu(BMI);
+    const menu = setMenu(req.user.BMI);
+    console.log(menu);
 
     res.render('nutrition', { menu: menu });
 });

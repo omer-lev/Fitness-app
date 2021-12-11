@@ -3,17 +3,24 @@
     margin: 2rem auto 0 auto;
     padding-bottom: 1rem;
     text-align: center;
-    background-color: rgba(248, 246, 246, 0.863);
+    background-color: #227cc0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.459);
 }
 
 .menu .title {
     padding: .5rem 0;
-    color: whitesmoke;
+    color: #236ca3;
     font-weight: 500;
-    background-color: #236ca3;
+    background-color: rgba(248, 246, 246, 0.863);
+}
+
+.menu .title h2 {
+    padding: .4rem 0;
 }
 
 .menu .title button {
+    background-color: #236ca3;
+    color: whitesmoke;
     width: 5rem;
 }
 
@@ -21,20 +28,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 3.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 15vh;
+    color: rgb(224, 224, 224);
 }
 
 .menu .meal h3 {
-    margin-bottom: .5rem;
-    border-bottom: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.493);
 }
 
 .menu .meal img {
-    width: 2rem;
-    height: 2.5rem;
     cursor: pointer;
 }
 
 .menu .meal #left-arrow {
     visibility: hidden;
+}
+
+.menu a {
+    color: whitesmoke;
+    font-size: .9rem;
+    font-weight: 400;
+    text-decoration: underline;
 }

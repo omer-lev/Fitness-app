@@ -13,9 +13,9 @@
     background-color: rgba(248, 246, 246, 0.863);
 }
 
-.profile .profile-card img {
-    width: 12rem;
-    height: 12rem;
+.profile .profile-card h1 {
+    color: #236ca3;
+    font-weight: 600;
     margin-bottom: 2rem;
 }
 

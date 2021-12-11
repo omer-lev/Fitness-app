@@ -15,7 +15,7 @@
 
     <div class="profile">
         <div class="profile-card">
-            <img src="/img/guest.png" alt="" />
+            <h1>MY PROFILE</h1>
             
             <div class="section-container">
                 <div class="section">
@@ -64,7 +64,7 @@
                     </div>
         
                     <div class="field">
-                        <input type="text" value="<%= user.currentWorkout %>" id="valid" disabled />
+                        <input type="text" value="<%= user.currentWorkout.toUpperCase().replace(/_OR_/g, '/') %>" id="valid" disabled />
                     </div>
                 </div>
         
