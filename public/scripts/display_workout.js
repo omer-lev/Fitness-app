@@ -9,6 +9,8 @@ const leftArrow = $('#left-arrow');
 const rightArrow = $('#right-arrow');
 
 const feedbackForm = $('#feedback');
+const diffBtn = $('.diffBtns div input');
+const reviewInput = $('#reviewInpt');
 const doneForm = $('#done');
 
 let counter = 0;
@@ -174,3 +176,29 @@ leftArrow.on('click', () => {
     feedbackForm.css('display', 'none');
     $('.workout').css('padding-bottom', '4vh');
 });
+
+feedbackForm.on('submit', (e) => {
+    e.preventDefault();
+
+    let diff, review;
+
+    review = reviewInput[0].value;
+
+    for (let i = 0; i < diffBtn.length; i++) {
+        if (diffBtn[i].checked) {
+            diff = diffBtn[i].value;
+            console.log('diff', diff);
+        }
+    }
+    
+    $.ajax({
+        url: '/workouts',
+        method: 'POST',
+        data: {
+            diff: diff,
+            review: review
+        }
+    });
+
+    window.location.href = '/workouts';
+})

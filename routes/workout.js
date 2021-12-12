@@ -35,13 +35,14 @@ router.get('/', isLoggedIn, (req, res) => {
 
 router.post('/', isLoggedIn, (req, res) => {
     const { id, BMI, schedule, workouts } = req.user;
-    const diff = parseInt(Object.keys(req.body)[0]);
+    const { diff, review } = req.body;
+    console.log(diff, review);
 
     const workout = setWorkout(BMI, schedule);
 
     const updatedUser = {
-        lastDifficulty: diff,
-        workouts: updateWeights(diff, workouts, req.user.currentWorkout)
+        lastDifficulty: parseInt(diff),
+        workouts: updateWeights(parseInt(diff), workouts, req.user.currentWorkout)
     };
 
     User.findByIdAndUpdate(id, updatedUser, { new: true }, (err, user) => {
