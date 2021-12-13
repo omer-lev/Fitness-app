@@ -9,19 +9,26 @@
 
 .menu .title {
     padding: .5rem 0;
-    color: #236ca3;
-    font-weight: 500;
-    background-color: rgba(248, 246, 246, 0.863);
+    color: whitesmoke;
+    background-color: #003F75;
 }
 
 .menu .title h2 {
-    padding: .4rem 0;
+    display: inline-block;
+    margin: .4rem 0;
+    padding: 0 .8rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.507);
 }
 
 .menu .title button {
-    background-color: #236ca3;
-    color: whitesmoke;
     width: 5rem;
+    color: whitesmoke;
+    background-color: #2477b6;
+}
+
+.menu .title button:hover {
+    background-color: #2477b6a6 !important;
 }
 
 .menu .meal {
