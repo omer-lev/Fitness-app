@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
-    username: {
+    from: {
         type: String,
         required: true,
     },
@@ -14,6 +14,11 @@ const reviewSchema = new mongoose.Schema({
     workout: {
         type: String,
         required: true
+    },
+
+    date: {
+        type: Date,
+        default: new Date()
     }
 });
 

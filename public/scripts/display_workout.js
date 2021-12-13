@@ -200,5 +200,5 @@ feedbackForm.on('submit', (e) => {
         }
     });
 
-    window.location.href = '/workouts';
-})
+    window.location.href = '/';
+});

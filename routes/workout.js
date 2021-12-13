@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/User');
+const Review = require('../models/Review');
+
 const fbw = require('../workouts/fbw');
 
 const ab = require('../workouts/ab');
@@ -36,9 +38,19 @@ router.get('/', isLoggedIn, (req, res) => {
 router.post('/', isLoggedIn, (req, res) => {
     const { id, BMI, schedule, workouts } = req.user;
     const { diff, review } = req.body;
-    console.log(diff, review);
 
     const workout = setWorkout(BMI, schedule);
+
+    if (review != "") {
+        const newReview = new Review({
+            from: req.user.username,
+            review: review,
+            workout: req.user.currentWorkout
+        });
+
+        newReview.save();
+        console.log(newReview);
+    }
 
     const updatedUser = {
         lastDifficulty: parseInt(diff),
@@ -56,7 +68,7 @@ router.post('/', isLoggedIn, (req, res) => {
             req.user.save();
             res.redirect('/');
         }
-    })
+    });
 })
 
 router.post('/done', isLoggedIn, (req, res) => {

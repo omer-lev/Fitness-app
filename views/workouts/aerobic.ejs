@@ -41,12 +41,29 @@
                 </ul>
             </div>
 
-            <form id="feedback" action="/workouts" method="POST" style="display: none">
+            <form id="feedback" style="display: none;">
                 <h2>דרג את קושי האימון</h2>
-            
-                <button type="submit" name="-2">קשה מדי</button>
-                <button type="submit" name="0">מעולה</button>
-                <button type="submit" name="2">קל מידי</button>
+                
+                <div class="diffBtns">
+                    <div>
+                        <input type="radio" name="diff" value="2">
+                        <label for="">קל מדי</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="diff" value="0">
+                        <label for="">מעולה</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="diff" value="-2">
+                        <label for="">קשה מדי</label>
+                    </div>
+                </div>
+
+                <input type="text" id="reviewInpt" placeholder="Leave a comment...">
+                <br>
+                <button type="submit" id="returnBtn">return</button>
             </form>
         </div>
     </div>
