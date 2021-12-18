@@ -6,25 +6,21 @@
     width: 65%;
     display: inline-block;
     margin: 2rem 0;
-    padding: 2rem 1rem;
+    padding-bottom: 2rem;
     text-align: center;
     box-shadow: 1px 1px 10px #000000;
     color: whitesmoke;
-    background-color: rgba(248, 246, 246, 0.863);
+    border: .3rem solid #236ca3;
+    background-color: #3b8ece;
 }
 
 .profile .profile-card h1 {
-    color: #236ca3;
+    padding: 1rem 0;
+    color: whitesmoke;
     font-weight: 600;
     margin-bottom: 2rem;
-}
-
-.profile .profile-card .section-container {
-    width: 75%;
-    margin: 0 auto 3rem auto;
-    padding: 1rem;
-    border: .3rem solid #236ca3;
-    background-color: rgba(0, 0, 0, 0.363);
+    background-color: #003F75;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .profile .profile-card .section {
@@ -40,12 +36,17 @@
 }
 
 .profile .profile-card .section .field input {
+    width: 100%;
     padding: 0 3rem 0 1rem;
     font-size: 1rem;
     color: whitesmoke;
     background: none;
     border: none;
     outline: none;
+}
+
+.profile .profile-card .section .field button {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.596);
 }
 
 .profile .profile-card .section .field h4 {
@@ -67,7 +68,7 @@
 }
 
 .profile .profile-card a {
-    color: #236ca3;
+    color: rgba(245, 245, 245, 0.794);
     font-size: 1rem;
     font-weight: 400;
     text-decoration: underline;
@@ -118,4 +119,33 @@
     font-size: .8rem;
     font-weight: 300;
     text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .profile .profile-card {
+        width: 85%;
+    }
+}
+
+@media (max-width: 580px) {
+    .profile .profile-card .section {
+        width: 98%;
+    }
+
+    .profile .profile-card .section .field button {
+        width: 8rem;
+        margin-left: .5rem;
+    }
+
+    .profile .profile-card .section .field input {
+        padding: 0 0 0 1rem;
+    }
+
+    .profile .profile-card .section .field h4 {
+        padding-left: .5rem;
+    }
+
+    .profile .profile-card form.section input {
+        width: 70%;
+    }
 }

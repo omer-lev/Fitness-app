@@ -65,12 +65,16 @@ app.use((req, res, next) => {
 
 // Use routes
 app.get('/', (req, res) => {
-    res.render('home');
+    if (!req.user) {
+        res.render('home');
+    } else {
+        res.render('profile');
+    }
 });
 
 app.use('/', authRoutes);
 
-app.use('/profile', profileRoutes);
+app.use('/', profileRoutes);
 
 app.use('/user_define', userDefineRoutes);
 

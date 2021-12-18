@@ -5,10 +5,6 @@ const setMenu = require('../handlers/setMenu');
 const TrainerMsg = require('../models/TrainerMsg');
 
 
-router.get('/', isLoggedIn, (req, res) => {
-    res.render('profile');
-});
-
 router.get('/nutrition', isLoggedIn, (req, res) => {
     const menu = setMenu(req.user.BMI);
     console.log(menu);

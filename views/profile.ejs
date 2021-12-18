@@ -13,11 +13,10 @@
 <body>
     <%- include('partials/header.ejs') %>
 
-    <div class="profile">
-        <div class="profile-card">
-            <h1>MY PROFILE</h1>
-            
-            <div class="section-container">
+    <div class="profile">            
+            <div class="profile-card">
+                <h1>FITNESS APP</h1>
+
                 <div class="section">
                     <div class="field">
                         <h4>username:</h4>
@@ -74,7 +73,7 @@
                     </div>
         
                     <div class="field">
-                        <button onclick="window.location.href = '/profile/nutrition'">nutrition menu</button>
+                        <button onclick="window.location.href = '/nutrition'">nutrition menu</button>
                     </div>
                 </div>
 
@@ -91,9 +90,6 @@
                     <p>message sent×</p>
                 </div>
             </div>
-            
-            <a href="/">back</a>
-        </div>
     </div>
 
     <script src="/scripts/message_trainer.js"></script>
