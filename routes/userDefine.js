@@ -17,7 +17,7 @@ const setWorkout = require('../handlers/setWorkout');
 
 
 router.get('/', isLoggedIn, (req, res) => {
-    req.user.workouts.length > 0 ? res.redirect('/workouts') : res.render('user_define');
+    req.user.workouts.length > 0 ? res.redirect('/') : res.render('user_define');
 })
 
 router.post('/', isLoggedIn, (req, res) => {
