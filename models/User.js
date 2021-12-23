@@ -21,7 +21,8 @@ const userSchema = new mongoose.Schema({
     workouts: Array, //? contains objects that hold different excersizes
     lastDifficulty: Number,
     currentWorkout: String,
-    currentDay: String
+    currentDay: String,
+    entries: Number
 });
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });
 

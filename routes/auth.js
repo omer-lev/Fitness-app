@@ -42,9 +42,13 @@ router.get('/login', (req, res) => {
     res.render('login');
 })
 
-router.post('/login', passport.authenticate('local', authSettings), (req, res) => {
+router.post('/login', passport.authenticate('local', authSettings), async (req, res) => {
     const redirectUrl = req.session.returnTo || '/';
     delete req.session.returnTo;
+
+    const user = await User.find({ email: req.body.email });
+    user[0].entries++;
+    await user[0].save();
 
     req.flash('success', 'welcome back!');
     res.redirect(redirectUrl);
