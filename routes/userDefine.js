@@ -26,11 +26,14 @@ router.post('/', isLoggedIn, (req, res) => {
     const { height, weight, schedule } = req.body;
     const BMI = (weight / (height / 100)**2).toFixed(1);
 
+    const workoutName = setWorkout(BMI, schedule);
+
     const updatedUser = {
         height: height,
         weight: weight,
         schedule: schedule,
-        BMI: BMI
+        BMI: BMI,
+        currentWorkout: workoutName
     };
 
     const selectionPages = [
@@ -46,9 +49,7 @@ router.post('/', isLoggedIn, (req, res) => {
             req.flash('error', `${err}`)
             res.redirect('/user_define');
         } else {
-            const workoutName = setWorkout(user.BMI, user.schedule);
-            
-            res.redirect(`/workouts/${workoutName}`);
+            res.redirect(`/`);
         }
     })
 })
