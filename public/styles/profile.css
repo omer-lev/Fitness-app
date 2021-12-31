@@ -100,6 +100,11 @@
     border: 1px solid #003F75;
     padding: 0px 5px;
     outline: none;
+    direction: rtl;
+}
+
+.profile .profile-card form.section input::placeholder {
+    text-align: left;
 }
 
 .profile .profile-card form.section button {
